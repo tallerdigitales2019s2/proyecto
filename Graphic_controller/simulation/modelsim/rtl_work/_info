@@ -1,0 +1,88 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 d/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/simulation/modelsim
+vImageComposer
+Z1 DXx6 sv_std 3 std 0 22 AD7iAPLo6nTIKk<N0eo=D3
+Z2 !s110 1574207456
+!i10b 1
+!s100 1:]gQjA7XeWW6:1@:]DUK0
+IzUoRXCNfEVbZ1>>0=I^h@1
+Z3 VDg1SIo80bB@j0V0VzS_@n1
+!s105 ImageComposer_sv_unit
+S1
+R0
+w1574207433
+8/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv
+F/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv
+L0 1
+Z4 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z5 !s108 1574207456.000000
+!s107 /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller|/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv|
+!i113 1
+Z6 o-sv -work work
+Z7 !s92 -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller
+Z8 tCvgOpt 0
+n@image@composer
+vImageComposer_aux
+R1
+R2
+!i10b 1
+!s100 aaWMeMmZL0:]zPiA6G^BB0
+IN_IN`ToieGD>fDPNhhZ2j3
+R3
+!s105 ImageComposer_aux_sv_unit
+S1
+R0
+w1574204336
+8/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv
+F/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller|/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv|
+!i113 1
+R6
+R7
+R8
+n@image@composer_aux
+vImageComposer_tb
+R1
+R2
+!i10b 1
+!s100 UPYWB8_A5izZ4JMU9==>72
+IF[XZhZCgC37QOzj:lAGJD3
+R3
+!s105 ImageComposer_tb_sv_unit
+S1
+R0
+w1574207215
+8/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_tb.sv
+F/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_tb.sv
+L0 1
+R4
+r1
+!s85 0
+31
+R5
+!s107 /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_tb.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller|/home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_tb.sv|
+!i113 1
+R6
+R7
+R8
+n@image@composer_tb

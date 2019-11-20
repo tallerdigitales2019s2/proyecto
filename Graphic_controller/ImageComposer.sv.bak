@@ -1,0 +1,5 @@
+module ImageComposer#(parameter N=8)(RGB_i, RGB_o);
+input logic [23:0] [7:0] RGB_i;
+output logic [23:0] [7:0] RGB_i;
+
+endmodule

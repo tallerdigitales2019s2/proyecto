@@ -1,0 +1,17 @@
+module MemoryManager(MR_i,MW_i,data_i,address_i,data_o, 
+							mem_address_o, mem_data_i,mem_data_o, mem_MR_o, mem_RD_o,
+							sm_address_o, sm_data_o, sm_MW_o,
+							uart_address_o, uart_data_i, uart_MR_o
+							);
+							
+input logic MR_i,MW_i;
+input logic[31:0] data_i,address_i,mem_data_i,uart_data_i;
+
+output logic mem_MR_o,mem_RD_o,sm_MW_o,uart_MR_o;
+output logic[31:0] data_o,mem_data_o,sm_data_o;
+output logic [29:0] uart_address_o,sm_address_o,mem_address_o;
+
+
+
+
+endmodule
