@@ -1,0 +1,101 @@
+------------------------------------------------------------
+Timing Analyzer Summary
+------------------------------------------------------------
+
+Type  : Slow 1100mV 85C Model Setup 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -3.904
+TNS   : -8431.281
+
+Type  : Slow 1100mV 85C Model Setup 'clk'
+Slack : -1.677
+TNS   : -2.695
+
+Type  : Slow 1100mV 85C Model Hold 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : 0.381
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Hold 'clk'
+Slack : 0.556
+TNS   : 0.000
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -2.174
+TNS   : -10711.803
+
+Type  : Slow 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.777
+TNS   : -3.871
+
+Type  : Slow 1100mV 0C Model Setup 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -3.800
+TNS   : -7951.392
+
+Type  : Slow 1100mV 0C Model Setup 'clk'
+Slack : -1.584
+TNS   : -2.586
+
+Type  : Slow 1100mV 0C Model Hold 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : 0.367
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Hold 'clk'
+Slack : 0.539
+TNS   : 0.000
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -2.174
+TNS   : -10701.699
+
+Type  : Slow 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.795
+TNS   : -4.040
+
+Type  : Fast 1100mV 85C Model Setup 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -2.209
+TNS   : -4661.070
+
+Type  : Fast 1100mV 85C Model Setup 'clk'
+Slack : -0.904
+TNS   : -0.928
+
+Type  : Fast 1100mV 85C Model Hold 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : 0.154
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Hold 'clk'
+Slack : 0.283
+TNS   : 0.000
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -2.174
+TNS   : -10613.048
+
+Type  : Fast 1100mV 85C Model Minimum Pulse Width 'clk'
+Slack : -0.681
+TNS   : -2.963
+
+Type  : Fast 1100mV 0C Model Setup 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -1.862
+TNS   : -3894.059
+
+Type  : Fast 1100mV 0C Model Setup 'clk'
+Slack : -0.733
+TNS   : -0.733
+
+Type  : Fast 1100mV 0C Model Hold 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : 0.131
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Hold 'clk'
+Slack : 0.254
+TNS   : 0.000
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk'
+Slack : -2.174
+TNS   : -10581.629
+
+Type  : Fast 1100mV 0C Model Minimum Pulse Width 'clk'
+Slack : -0.670
+TNS   : -2.925
+
+------------------------------------------------------------

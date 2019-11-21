@@ -1,0 +1,4 @@
+module WallsController#(parameter N=0)(clk, MW_i, address_i,data_i,x_pos_i,y_pos_i,RGB_o, 
+							mem_address_o, mem_data_i);
+							
+endmodule

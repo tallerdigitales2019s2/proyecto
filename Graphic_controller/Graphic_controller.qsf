@@ -38,7 +38,7 @@
 
 set_global_assignment -name FAMILY "Cyclone V"
 set_global_assignment -name DEVICE 5CSEMA5F31C6
-set_global_assignment -name TOP_LEVEL_ENTITY ImageComposer_tb
+set_global_assignment -name TOP_LEVEL_ENTITY Graphic_controller
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 18.1.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "10:54:58  NOVEMBER 19, 2019"
 set_global_assignment -name LAST_QUARTUS_VERSION "18.1.0 Lite Edition"
@@ -52,11 +52,21 @@ set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
 set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
+set_global_assignment -name SYSTEMVERILOG_FILE VGA_MODULE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CLOCK_DIVIDER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE CLK_DIVIDER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE SIGNAL_SYNC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE VGA_MODULE_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE V_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE H_COUNTER_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE H_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE vgaController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE V_COUNTER_TB.sv
+set_global_assignment -name VERILOG_FILE mem_tanque1_bb.v
 set_global_assignment -name SYSTEMVERILOG_FILE MemoryManager.sv
 set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller.sv
 set_global_assignment -name SYSTEMVERILOG_FILE MemoryManager_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE TankController.sv
-set_global_assignment -name QIP_FILE mem_tanque1.qip
 set_global_assignment -name SYSTEMVERILOG_FILE SpriteController.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ImageComposer.sv
 set_global_assignment -name SYSTEMVERILOG_FILE ImageComposer_aux.sv
@@ -65,4 +75,50 @@ set_global_assignment -name SYSTEMVERILOG_FILE ImageComposer_tb.sv
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_F13 -to R[7]
+set_location_assignment PIN_E12 -to R[6]
+set_location_assignment PIN_D12 -to R[5]
+set_location_assignment PIN_C12 -to R[4]
+set_location_assignment PIN_B12 -to R[3]
+set_location_assignment PIN_E13 -to R[2]
+set_location_assignment PIN_C13 -to R[1]
+set_location_assignment PIN_A13 -to R[0]
+set_location_assignment PIN_E11 -to G[7]
+set_location_assignment PIN_F11 -to G[6]
+set_location_assignment PIN_G12 -to G[5]
+set_location_assignment PIN_G11 -to G[4]
+set_location_assignment PIN_G10 -to G[3]
+set_location_assignment PIN_H12 -to G[2]
+set_location_assignment PIN_J10 -to G[1]
+set_location_assignment PIN_J9 -to G[0]
+set_location_assignment PIN_J14 -to B[7]
+set_location_assignment PIN_G15 -to B[6]
+set_location_assignment PIN_F15 -to B[5]
+set_location_assignment PIN_H14 -to B[4]
+set_location_assignment PIN_F14 -to B[3]
+set_location_assignment PIN_H13 -to B[2]
+set_location_assignment PIN_G13 -to B[1]
+set_location_assignment PIN_B13 -to B[0]
+set_location_assignment PIN_B11 -to H_SYNC
+set_location_assignment PIN_D11 -to V_SYNC
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_A11 -to vga_clock
+set_location_assignment PIN_C10 -to SYNC_N
+set_location_assignment PIN_F10 -to v_en
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity VGA_MODULE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity VGA_MODULE -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity VGA_MODULE -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity VGA_MODULE -section_id Top
+set_location_assignment PIN_AA14 -to btn_confirm_i
+set_location_assignment PIN_AA15 -to btn_i
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TecTacToe -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TecTacToe -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -entity TecTacToe -section_id Top
+set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TecTacToe -section_id Top
+set_global_assignment -name SYSTEMVERILOG_FILE WallsController.sv
+set_global_assignment -name QIP_FILE mem_score.qip
+set_global_assignment -name QIP_FILE mem_floor.qip
+set_global_assignment -name SYSTEMVERILOG_FILE FloorController.sv
+set_global_assignment -name QIP_FILE mem_tank1.qip
+set_global_assignment -name QIP_FILE mem_tank2.qip
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
