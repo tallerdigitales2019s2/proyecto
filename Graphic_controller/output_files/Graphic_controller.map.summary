@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Nov 21 01:46:52 2019
+Analysis & Synthesis Status : Successful - Thu Nov 21 03:09:41 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Graphic_controller
 Top-level Entity Name : Graphic_controller
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 73
+Total registers : 79
 Total pins : 32
 Total virtual pins : 0
-Total block memory bits : 1,622,016
+Total block memory bits : 3,194,880
 Total DSP Blocks : 0
 Total HSSI RX PCSs : 0
 Total HSSI PMA RX Deserializers : 0
