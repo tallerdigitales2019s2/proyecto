@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Graphic_controller
-Thu Nov 21 03:09:41 2019
+Thu Nov 21 15:49:33 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -15,28 +15,35 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   7. Analysis & Synthesis Resource Utilization by Entity
   8. Analysis & Synthesis RAM Summary
   9. Analysis & Synthesis IP Cores Summary
- 10. Registers Removed During Synthesis
- 11. General Register Statistics
- 12. Multiplexer Restructuring Statistics (Restructuring Performed)
- 13. Source assignments for SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component|altsyncram_rhf1:auto_generated
- 14. Source assignments for SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component|altsyncram_gkf1:auto_generated
- 15. Source assignments for SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component|altsyncram_hkf1:auto_generated
- 16. Source assignments for SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component|altsyncram_0mf1:auto_generated
- 17. Parameter Settings for User Entity Instance: SpriteController:spriteController
- 18. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component
- 19. Parameter Settings for User Entity Instance: SpriteController:spriteController|WallsController:wallsController
- 20. Parameter Settings for User Entity Instance: SpriteController:spriteController|TankController:tc1
- 21. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component
- 22. Parameter Settings for User Entity Instance: SpriteController:spriteController|TankController:tc2
- 23. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component
- 24. Parameter Settings for User Entity Instance: SpriteController:spriteController|ScoreController:scoreController
- 25. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component
- 26. Parameter Settings for User Entity Instance: SpriteController:spriteController|ImageComposer:imageComposer
- 27. altsyncram Parameter Settings by Entity Instance
- 28. Port Connectivity Checks: "SpriteController:spriteController|WallsController:wallsController"
- 29. Post-Synthesis Netlist Statistics for Top Partition
- 30. Elapsed Time Per Partition
- 31. Analysis & Synthesis Messages
+ 10. State Machine - |Graphic_controller|uart_rx:RX0|state
+ 11. Registers Removed During Synthesis
+ 12. Removed Registers Triggering Further Register Optimizations
+ 13. General Register Statistics
+ 14. Inverted Register Statistics
+ 15. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 16. Source assignments for SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component|altsyncram_rhf1:auto_generated
+ 17. Source assignments for SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component|altsyncram_gkf1:auto_generated
+ 18. Source assignments for SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component|altsyncram_hkf1:auto_generated
+ 19. Source assignments for SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component|altsyncram_0mf1:auto_generated
+ 20. Parameter Settings for User Entity Instance: Top-level Entity: |Graphic_controller
+ 21. Parameter Settings for User Entity Instance: SpriteController:spriteController
+ 22. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component
+ 23. Parameter Settings for User Entity Instance: SpriteController:spriteController|WallsController:wallsController
+ 24. Parameter Settings for User Entity Instance: SpriteController:spriteController|TankController:tc1
+ 25. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component
+ 26. Parameter Settings for User Entity Instance: SpriteController:spriteController|TankController:tc2
+ 27. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component
+ 28. Parameter Settings for User Entity Instance: SpriteController:spriteController|ScoreController:scoreController
+ 29. Parameter Settings for User Entity Instance: SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component
+ 30. Parameter Settings for User Entity Instance: SpriteController:spriteController|ImageComposer:imageComposer
+ 31. Parameter Settings for User Entity Instance: uart_rx:RX0
+ 32. Parameter Settings for User Entity Instance: uart_rx:RX0|baudgen_rx:baudgen0
+ 33. altsyncram Parameter Settings by Entity Instance
+ 34. Port Connectivity Checks: "SpriteController:spriteController|WallsController:wallsController"
+ 35. Post-Synthesis Netlist Statistics for Top Partition
+ 36. Elapsed Time Per Partition
+ 37. Analysis & Synthesis Messages
+ 38. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -62,14 +69,14 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Thu Nov 21 03:09:41 2019       ;
+; Analysis & Synthesis Status     ; Successful - Thu Nov 21 15:49:33 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Graphic_controller                          ;
 ; Top-level Entity Name           ; Graphic_controller                          ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 79                                          ;
-; Total pins                      ; 32                                          ;
+; Total registers                 ; 140                                         ;
+; Total pins                      ; 42                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 3,194,880                                   ;
 ; Total DSP Blocks                ; 0                                           ;
@@ -188,48 +195,51 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                                                      ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                        ; Library ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
-; VGA_MODULE.sv                    ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv                   ;         ;
-; CLK_DIVIDER.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/CLK_DIVIDER.sv                  ;         ;
-; SIGNAL_SYNC.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SIGNAL_SYNC.sv                  ;         ;
-; V_COUNTER.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/V_COUNTER.sv                    ;         ;
-; H_COUNTER.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/H_COUNTER.sv                    ;         ;
-; Graphic_controller.sv            ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv           ;         ;
-; TankController.sv                ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv               ;         ;
-; SpriteController.sv              ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv             ;         ;
-; ImageComposer.sv                 ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv                ;         ;
-; ImageComposer_aux.sv             ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv            ;         ;
-; WallsController.sv               ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/WallsController.sv              ;         ;
-; mem_score.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_score.v                     ;         ;
-; mem_floor.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_floor.v                     ;         ;
-; FloorController.sv               ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/FloorController.sv              ;         ;
-; mem_tank1.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank1.v                     ;         ;
-; mem_tank2.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank2.v                     ;         ;
-; output_files/ScoreController.sv  ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf                                     ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                              ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/lpm_mux.inc                                        ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/lpm_decode.inc                                     ;         ;
-; aglobal181.inc                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/aglobal181.inc                                     ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                                      ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altrom.inc                                         ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altram.inc                                         ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altdpram.inc                                       ;         ;
-; db/altsyncram_rhf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_rhf1.tdf          ;         ;
-; floor.mif                        ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/floor.mif                       ;         ;
-; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/decode_61a.tdf               ;         ;
-; db/mux_bhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/mux_bhb.tdf                  ;         ;
-; db/altsyncram_gkf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_gkf1.tdf          ;         ;
-; tanque1.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/tanque1.mif                     ;         ;
-; db/altsyncram_hkf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_hkf1.tdf          ;         ;
-; tanque2.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/tanque2.mif                     ;         ;
-; db/altsyncram_0mf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_0mf1.tdf          ;         ;
-; score.mif                        ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/score.mif                       ;         ;
-+----------------------------------+-----------------+----------------------------------------+-----------------------------------------------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                             ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                               ; Library ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
+; ScoreController.sv               ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv     ;         ;
+; uart-rx/baudgen_rx.v             ; yes             ; User Verilog HDL File                  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen_rx.v   ;         ;
+; uart-rx/uart_rx.v                ; yes             ; User Verilog HDL File                  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/uart_rx.v      ;         ;
+; VGA_MODULE.sv                    ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv          ;         ;
+; CLK_DIVIDER.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/CLK_DIVIDER.sv         ;         ;
+; SIGNAL_SYNC.sv                   ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SIGNAL_SYNC.sv         ;         ;
+; V_COUNTER.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/V_COUNTER.sv           ;         ;
+; H_COUNTER.sv                     ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/H_COUNTER.sv           ;         ;
+; Graphic_controller.sv            ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv  ;         ;
+; TankController.sv                ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv      ;         ;
+; SpriteController.sv              ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv    ;         ;
+; ImageComposer.sv                 ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv       ;         ;
+; ImageComposer_aux.sv             ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer_aux.sv   ;         ;
+; WallsController.sv               ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/WallsController.sv     ;         ;
+; mem_score.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_score.v            ;         ;
+; mem_floor.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_floor.v            ;         ;
+; FloorController.sv               ; yes             ; User SystemVerilog HDL File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/FloorController.sv     ;         ;
+; mem_tank1.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank1.v            ;         ;
+; mem_tank2.v                      ; yes             ; User Wizard-Generated File             ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank2.v            ;         ;
+; uart-rx/baudgen.vh               ; yes             ; Auto-Found Unspecified File            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen.vh     ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf                            ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/stratix_ram_block.inc                     ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/lpm_mux.inc                               ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/lpm_decode.inc                            ;         ;
+; aglobal181.inc                   ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/aglobal181.inc                            ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/a_rdenreg.inc                             ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altrom.inc                                ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altram.inc                                ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; /opt/altera/18.1/quartus/libraries/megafunctions/altdpram.inc                              ;         ;
+; db/altsyncram_rhf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_rhf1.tdf ;         ;
+; floor.mif                        ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/floor.mif              ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/decode_61a.tdf      ;         ;
+; db/mux_bhb.tdf                   ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/mux_bhb.tdf         ;         ;
+; db/altsyncram_gkf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_gkf1.tdf ;         ;
+; tanque1.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/tanque1.mif            ;         ;
+; db/altsyncram_hkf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_hkf1.tdf ;         ;
+; tanque2.mif                      ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/tanque2.mif            ;         ;
+; db/altsyncram_0mf1.tdf           ; yes             ; Auto-Generated Megafunction            ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_0mf1.tdf ;         ;
+; score.mif                        ; yes             ; Auto-Found Memory Initialization File  ; /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/score.mif              ;         ;
++----------------------------------+-----------------+----------------------------------------+--------------------------------------------------------------------------------------------+---------+
 
 
 +------------------------------------------------------------------------------------------+
@@ -237,18 +247,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+--------------------------------------------+
 ; Resource                                    ; Usage                                      ;
 +---------------------------------------------+--------------------------------------------+
-; Estimate of Logic utilization (ALMs needed) ; 325                                        ;
+; Estimate of Logic utilization (ALMs needed) ; 379                                        ;
 ;                                             ;                                            ;
-; Combinational ALUT usage for logic          ; 481                                        ;
+; Combinational ALUT usage for logic          ; 549                                        ;
 ;     -- 7 input functions                    ; 0                                          ;
-;     -- 6 input functions                    ; 167                                        ;
-;     -- 5 input functions                    ; 84                                         ;
-;     -- 4 input functions                    ; 90                                         ;
-;     -- <=3 input functions                  ; 140                                        ;
+;     -- 6 input functions                    ; 203                                        ;
+;     -- 5 input functions                    ; 106                                        ;
+;     -- 4 input functions                    ; 46                                         ;
+;     -- <=3 input functions                  ; 194                                        ;
 ;                                             ;                                            ;
-; Dedicated logic registers                   ; 79                                         ;
+; Dedicated logic registers                   ; 140                                        ;
 ;                                             ;                                            ;
-; I/O pins                                    ; 32                                         ;
+; I/O pins                                    ; 42                                         ;
 ; Total MLAB memory bits                      ; 0                                          ;
 ; Total block memory bits                     ; 3194880                                    ;
 ;                                             ;                                            ;
@@ -256,8 +266,8 @@ refer to the applicable agreement for further details.
 ;                                             ;                                            ;
 ; Maximum fan-out node                        ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ;
 ; Maximum fan-out                             ; 510                                        ;
-; Total fan-out                               ; 8705                                       ;
-; Average fan-out                             ; 8.24                                       ;
+; Total fan-out                               ; 9206                                       ;
+; Average fan-out                             ; 7.64                                       ;
 +---------------------------------------------+--------------------------------------------+
 
 
@@ -266,15 +276,15 @@ refer to the applicable agreement for further details.
 +------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 ; Compilation Hierarchy Node                                 ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                             ; Entity Name        ; Library Name ;
 +------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
-; |Graphic_controller                                        ; 481 (0)             ; 79 (0)                    ; 3194880           ; 0          ; 32   ; 0            ; |Graphic_controller                                                                                                                                             ; Graphic_controller ; work         ;
-;    |SpriteController:spriteController|                     ; 392 (0)             ; 12 (0)                    ; 3194880           ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController                                                                                                           ; SpriteController   ; work         ;
-;       |ImageComposer:imageComposer|                        ; 187 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer                                                                               ; ImageComposer      ; work         ;
-;          |ImageComposer_aux:generate_submodules[2].ic_aux| ; 14 (14)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[2].ic_aux                               ; ImageComposer_aux  ; work         ;
-;          |ImageComposer_aux:generate_submodules[3].ic_aux| ; 15 (15)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[3].ic_aux                               ; ImageComposer_aux  ; work         ;
-;          |ImageComposer_aux:generate_submodules[4].ic_aux| ; 158 (158)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux                               ; ImageComposer_aux  ; work         ;
-;       |ScoreController:scoreController|                    ; 139 (139)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ScoreController:scoreController                                                                           ; ScoreController    ; work         ;
-;       |TankController:tc1|                                 ; 27 (27)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|TankController:tc1                                                                                        ; TankController     ; work         ;
-;       |TankController:tc2|                                 ; 23 (23)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|TankController:tc2                                                                                        ; TankController     ; work         ;
+; |Graphic_controller                                        ; 549 (1)             ; 140 (18)                  ; 3194880           ; 0          ; 42   ; 0            ; |Graphic_controller                                                                                                                                             ; Graphic_controller ; work         ;
+;    |SpriteController:spriteController|                     ; 426 (0)             ; 20 (0)                    ; 3194880           ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController                                                                                                           ; SpriteController   ; work         ;
+;       |ImageComposer:imageComposer|                        ; 160 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer                                                                               ; ImageComposer      ; work         ;
+;          |ImageComposer_aux:generate_submodules[2].ic_aux| ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[2].ic_aux                               ; ImageComposer_aux  ; work         ;
+;          |ImageComposer_aux:generate_submodules[3].ic_aux| ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[3].ic_aux                               ; ImageComposer_aux  ; work         ;
+;          |ImageComposer_aux:generate_submodules[4].ic_aux| ; 141 (141)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux                               ; ImageComposer_aux  ; work         ;
+;       |ScoreController:scoreController|                    ; 142 (142)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|ScoreController:scoreController                                                                           ; ScoreController    ; work         ;
+;       |TankController:tc1|                                 ; 76 (76)             ; 8 (8)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|TankController:tc1                                                                                        ; TankController     ; work         ;
+;       |TankController:tc2|                                 ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|TankController:tc2                                                                                        ; TankController     ; work         ;
 ;       |WallsController:wallsController|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|WallsController:wallsController                                                                           ; WallsController    ; work         ;
 ;       |mem_floor:floor_mem|                                ; 7 (0)               ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|mem_floor:floor_mem                                                                                       ; mem_floor          ; work         ;
 ;          |altsyncram:altsyncram_component|                 ; 7 (0)               ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |Graphic_controller|SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component                                                       ; altsyncram         ; work         ;
@@ -295,6 +305,8 @@ refer to the applicable agreement for further details.
 ;       |SIGNAL_SYNC:sync|                                   ; 87 (12)             ; 65 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|VGA_MODULE:vga|SIGNAL_SYNC:sync                                                                                                             ; SIGNAL_SYNC        ; work         ;
 ;          |H_COUNTER:h_signal|                              ; 37 (37)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|VGA_MODULE:vga|SIGNAL_SYNC:sync|H_COUNTER:h_signal                                                                                          ; H_COUNTER          ; work         ;
 ;          |V_COUNTER:v_signal|                              ; 38 (38)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|VGA_MODULE:vga|SIGNAL_SYNC:sync|V_COUNTER:v_signal                                                                                          ; V_COUNTER          ; work         ;
+;    |uart_rx:RX0|                                           ; 33 (12)             ; 35 (26)                   ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|uart_rx:RX0                                                                                                                                 ; uart_rx            ; work         ;
+;       |baudgen_rx:baudgen0|                                ; 21 (21)             ; 9 (9)                     ; 0                 ; 0          ; 0    ; 0            ; |Graphic_controller|uart_rx:RX0|baudgen_rx:baudgen0                                                                                                             ; baudgen_rx         ; work         ;
 +------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+-----------------------------------------------------------------------------------------------------------------------------------------------------------------+--------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -323,28 +335,202 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+--------------+---------+--------------+--------------+---------------------------------------------------------------------------+-----------------+
 
 
+Encoding Type:  One-Hot
++---------------------------------------------------------------+
+; State Machine - |Graphic_controller|uart_rx:RX0|state         ;
++------------+-----------+------------+------------+------------+
+; Name       ; state.DAV ; state.LOAD ; state.RECV ; state.IDLE ;
++------------+-----------+------------+------------+------------+
+; state.IDLE ; 0         ; 0          ; 0          ; 0          ;
+; state.RECV ; 0         ; 0          ; 1          ; 1          ;
+; state.LOAD ; 0         ; 1          ; 0          ; 1          ;
+; state.DAV  ; 1         ; 0          ; 0          ; 1          ;
++------------+-----------+------------+------------+------------+
+
+
 +-------------------------------------------------------------------------------------------------------------------------------+
 ; Registers Removed During Synthesis                                                                                            ;
 +---------------------------------------------------------------------------------+---------------------------------------------+
 ; Register name                                                                   ; Reason for Removal                          ;
 +---------------------------------------------------------------------------------+---------------------------------------------+
-; SpriteController:spriteController|ScoreController:scoreController|x_pos[7..13]  ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|ScoreController:scoreController|x_pos[6]      ; Stuck at VCC due to stuck port clock_enable ;
-; SpriteController:spriteController|ScoreController:scoreController|x_pos[1..5]   ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|ScoreController:scoreController|x_pos[0]      ; Stuck at VCC due to stuck port clock_enable ;
-; SpriteController:spriteController|ScoreController:scoreController|x_pos[14..31] ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc2|x_pos[6..14]               ; Stuck at GND due to stuck port clock_enable ;
+; data[8..31]                                                                     ; Stuck at GND due to stuck port data_in      ;
+; address[0,1,27..29]                                                             ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|ScoreController:scoreController|score1[8..21] ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc2|y_pos[8..25]               ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc2|x_pos[8..31]               ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc2|y_pos[26..31]              ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc1|y_pos[8..25]               ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc1|x_pos[8..31]               ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|TankController:tc1|y_pos[26..31]              ; Stuck at GND due to stuck port data_in      ;
+; SpriteController:spriteController|ScoreController:scoreController|score1[0..7]  ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|y_pos[7]                   ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|y_pos[6]                   ; Stuck at VCC due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|y_pos[3..5]                ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|y_pos[1,2]                 ; Stuck at VCC due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|y_pos[0]                   ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc2|x_pos[6,7]                 ; Stuck at GND due to stuck port clock_enable ;
 ; SpriteController:spriteController|TankController:tc2|x_pos[4,5]                 ; Stuck at VCC due to stuck port clock_enable ;
 ; SpriteController:spriteController|TankController:tc2|x_pos[2,3]                 ; Stuck at GND due to stuck port clock_enable ;
 ; SpriteController:spriteController|TankController:tc2|x_pos[1]                   ; Stuck at VCC due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc2|x_pos[0,15..31]            ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc1|x_pos[6..14]               ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc1|x_pos[5]                   ; Stuck at VCC due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc1|x_pos[2..4]                ; Stuck at GND due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc1|x_pos[0,1]                 ; Stuck at VCC due to stuck port clock_enable ;
-; SpriteController:spriteController|TankController:tc1|x_pos[15..31]              ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 96                                          ;                                             ;
+; SpriteController:spriteController|TankController:tc2|x_pos[0]                   ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc1|y_pos[6,7]                 ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc1|y_pos[4,5]                 ; Stuck at VCC due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc1|y_pos[3]                   ; Stuck at GND due to stuck port clock_enable ;
+; SpriteController:spriteController|TankController:tc1|y_pos[0..2]                ; Stuck at VCC due to stuck port clock_enable ;
+; uart_rx:RX0|state~2                                                             ; Lost fanout                                 ;
+; uart_rx:RX0|state~3                                                             ; Lost fanout                                 ;
+; Total Number of Removed Registers = 173                                         ;                                             ;
 +---------------------------------------------------------------------------------+---------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                               ;
++---------------+---------------------------+-------------------------------------------------------------------------------+
+; Register name ; Reason for Removal        ; Registers Removed due to This Register                                        ;
++---------------+---------------------------+-------------------------------------------------------------------------------+
+; address[0]    ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[3],  ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|ScoreController:scoreController|score1[2],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[1],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[0],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[7],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[6],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[5],  ;
+;               ;                           ; SpriteController:spriteController|ScoreController:scoreController|score1[4],  ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[7],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[6],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[5],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[4],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[3],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[2],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[1],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|y_pos[0],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[7],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[6],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[5],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[4],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[3],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[2],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[1],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[0],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[7],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[6],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[5],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[4],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[3],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[2],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[1],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[0]                 ;
+; data[9]       ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[9],  ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[9],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[9],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[9],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[9]                 ;
+; data[21]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[21], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[21],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[21],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[21],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[21]                ;
+; data[20]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[20], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[20],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[20],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[20],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[20]                ;
+; data[19]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[19], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[19],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[19],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[19],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[19]                ;
+; data[18]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[18], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[18],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[18],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[18],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[18]                ;
+; data[17]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[17], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[17],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[17],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[17],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[17]                ;
+; data[16]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[16], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[16],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[16],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[16],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[16]                ;
+; data[14]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[14], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[14],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[14],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[14],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[14]                ;
+; data[13]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[13], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[13],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[13],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[13],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[13]                ;
+; data[12]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[12], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[12],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[12],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[12],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[12]                ;
+; data[11]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[11], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[11],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[11],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[11],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[11]                ;
+; data[8]       ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[8],  ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[8],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[8],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[8],                ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[8]                 ;
+; data[10]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[10], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[10],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[10],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[10],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[10]                ;
+; data[15]      ; Stuck at GND              ; SpriteController:spriteController|ScoreController:scoreController|score1[15], ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[15],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc2|x_pos[15],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[15],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[15]                ;
+; data[31]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[31],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[31],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[31],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[31]                ;
+; data[30]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[30],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[30],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[30],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[30]                ;
+; data[29]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[29],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[29],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[29],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[29]                ;
+; data[28]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[28],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[28],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[28],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[28]                ;
+; data[27]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[27],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[27],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[27],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[27]                ;
+; data[26]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|x_pos[26],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|y_pos[26],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[26],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[26]                ;
+; data[25]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|y_pos[25],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|x_pos[25],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[25],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[25]                ;
+; data[24]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|y_pos[24],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|x_pos[24],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[24],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[24]                ;
+; data[23]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|y_pos[23],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|x_pos[23],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[23],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[23]                ;
+; data[22]      ; Stuck at GND              ; SpriteController:spriteController|TankController:tc2|y_pos[22],               ;
+;               ; due to stuck port data_in ; SpriteController:spriteController|TankController:tc2|x_pos[22],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|y_pos[22],               ;
+;               ;                           ; SpriteController:spriteController|TankController:tc1|x_pos[22]                ;
++---------------+---------------------------+-------------------------------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -352,24 +538,41 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 79    ;
-; Number of registers using Synchronous Clear  ; 64    ;
+; Total registers                              ; 140   ;
+; Number of registers using Synchronous Clear  ; 90    ;
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 32    ;
+; Number of registers using Clock Enable       ; 78    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                            ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                  ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
-; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |Graphic_controller|SpriteController:spriteController|ScoreController:scoreController|RGB_o[10]                                             ;
-; 12:1               ; 24 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux|RGB_o[12] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------------------------------------------+
++-------------------------------------------------------------------------+
+; Inverted Register Statistics                                            ;
++---------------------------------------------------------------+---------+
+; Inverted Register                                             ; Fan out ;
++---------------------------------------------------------------+---------+
+; SpriteController:spriteController|TankController:tc1|x_pos[1] ; 2       ;
+; SpriteController:spriteController|TankController:tc1|x_pos[0] ; 2       ;
+; SpriteController:spriteController|TankController:tc1|x_pos[5] ; 10      ;
+; Total number of inverted registers = 3                        ;         ;
++---------------------------------------------------------------+---------+
+
+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                                                                                                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                                 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Graphic_controller|uart_rx:RX0|data[6]                                                                                                    ;
+; 3:1                ; 8 bits    ; 16 LEs        ; 0 LEs                ; 16 LEs                 ; Yes        ; |Graphic_controller|leds[5]~reg0                                                                                                           ;
+; 3:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |Graphic_controller|uart_rx:RX0|bitc[0]                                                                                                    ;
+; 4:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |Graphic_controller|uart_rx:RX0|baudgen_rx:baudgen0|divcounter[4]                                                                          ;
+; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |Graphic_controller|SpriteController:spriteController|ScoreController:scoreController|RGB_o[10]                                            ;
+; 7:1                ; 2 bits    ; 8 LEs         ; 6 LEs                ; 2 LEs                  ; No         ; |Graphic_controller|uart_rx:RX0|state                                                                                                      ;
+; 12:1               ; 24 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |Graphic_controller|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux|RGB_o[0] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +---------------------------------------------------------------------------------------------------------------------------------------------+
@@ -406,6 +609,16 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +---------------------------------+--------------------+------+-------------------------------------------------------------------------------+
 ; OPTIMIZE_POWER_DURING_SYNTHESIS ; NORMAL_COMPILATION ; -    ; -                                                                             ;
 +---------------------------------+--------------------+------+-------------------------------------------------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: Top-level Entity: |Graphic_controller ;
++----------------+-------+-----------------------------------------------------------+
+; Parameter Name ; Value ; Type                                                      ;
++----------------+-------+-----------------------------------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                                            ;
++----------------+-------+-----------------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
 +--------------------------------------------------------------------------------+
@@ -715,6 +928,26 @@ Note: In order to hide this table in the UI and the text report file, please set
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
 
++----------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX0 ;
++----------------+-------+---------------------------------+
+; Parameter Name ; Value ; Type                            ;
++----------------+-------+---------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                  ;
++----------------+-------+---------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
++------------------------------------------------------------------------------+
+; Parameter Settings for User Entity Instance: uart_rx:RX0|baudgen_rx:baudgen0 ;
++----------------+-------+-----------------------------------------------------+
+; Parameter Name ; Value ; Type                                                ;
++----------------+-------+-----------------------------------------------------+
+; BAUDRATE       ; 434   ; Signed Integer                                      ;
++----------------+-------+-----------------------------------------------------+
+Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
+
+
 +-----------------------------------------------------------------------------------------------------------------------------------+
 ; altsyncram Parameter Settings by Entity Instance                                                                                  ;
 +-------------------------------------------+---------------------------------------------------------------------------------------+
@@ -785,31 +1018,35 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 79                          ;
-;     ENA SCLR          ; 32                          ;
-;     SCLR              ; 32                          ;
-;     plain             ; 15                          ;
-; arriav_lcell_comb     ; 482                         ;
-;     arith             ; 70                          ;
-;         1 data inputs ; 70                          ;
-;     normal            ; 377                         ;
+; arriav_ff             ; 140                         ;
+;     ENA               ; 30                          ;
+;     ENA SCLR          ; 48                          ;
+;     SCLR              ; 42                          ;
+;     plain             ; 20                          ;
+; arriav_lcell_comb     ; 551                         ;
+;     arith             ; 87                          ;
+;         1 data inputs ; 82                          ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 2                           ;
+;     normal            ; 431                         ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 2                           ;
-;         2 data inputs ; 11                          ;
-;         3 data inputs ; 25                          ;
-;         4 data inputs ; 87                          ;
-;         5 data inputs ; 84                          ;
-;         6 data inputs ; 167                         ;
-;     shared            ; 35                          ;
-;         1 data inputs ; 14                          ;
-;         2 data inputs ; 15                          ;
-;         3 data inputs ; 3                           ;
-;         4 data inputs ; 3                           ;
-; boundary_port         ; 32                          ;
+;         1 data inputs ; 6                           ;
+;         2 data inputs ; 19                          ;
+;         3 data inputs ; 53                          ;
+;         4 data inputs ; 43                          ;
+;         5 data inputs ; 106                         ;
+;         6 data inputs ; 203                         ;
+;     shared            ; 33                          ;
+;         1 data inputs ; 9                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 2                           ;
+;         4 data inputs ; 1                           ;
+; boundary_port         ; 42                          ;
 ; stratixv_ram_block    ; 432                         ;
 ;                       ;                             ;
 ; Max LUT depth         ; 7.00                        ;
-; Average LUT depth     ; 4.61                        ;
+; Average LUT depth     ; 4.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -818,7 +1055,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:01     ;
+; Top            ; 00:00:02     ;
 +----------------+--------------+
 
 
@@ -828,10 +1065,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 21 03:09:28 2019
+    Info: Processing started: Thu Nov 21 15:49:19 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Graphic_controller -c Graphic_controller
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file ScoreController.sv
+    Info (12023): Found entity 1: ScoreController File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv Line: 1
+Info (12021): Found 1 design units, including 1 entities, in source file uart-rx/baudgen_rx.v
+    Info (12023): Found entity 1: baudgen_rx File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen_rx.v Line: 32
+Info (12021): Found 1 design units, including 1 entities, in source file uart-rx/uart_rx.v
+    Info (12023): Found entity 1: uart_rx File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/uart_rx.v Line: 21
 Info (12021): Found 1 design units, including 1 entities, in source file VGA_MODULE.sv
     Info (12023): Found entity 1: VGA_MODULE File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file CLOCK_DIVIDER.sv
@@ -852,7 +1095,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file vgaCont
     Info (12023): Found entity 1: vgaController File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/vgaController.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file V_COUNTER_TB.sv
     Info (12023): Found entity 1: V_COUNTER_TB File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/V_COUNTER_TB.sv Line: 1
-Warning (12019): Can't analyze file -- file mem_tanque1_bb.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file MemoryManager.sv
     Info (12023): Found entity 1: MemoryManager File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/MemoryManager.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file Graphic_controller.sv
@@ -896,17 +1138,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file mem_tan
     Info (12023): Found entity 1: mem_tank1 File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank1.v Line: 39
 Info (12021): Found 1 design units, including 1 entities, in source file mem_tank2.v
     Info (12023): Found entity 1: mem_tank2 File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank2.v Line: 39
-Info (12021): Found 1 design units, including 1 entities, in source file output_files/ScoreController.sv
-    Info (12023): Found entity 1: ScoreController File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 1
 Info (12127): Elaborating entity "Graphic_controller" for the top level hierarchy
-Info (12128): Elaborating entity "VGA_MODULE" for hierarchy "VGA_MODULE:vga" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 22
+Warning (10230): Verilog HDL assignment warning at Graphic_controller.sv(71): truncated value with size 3 to match size of target (2) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 71
+Info (12128): Elaborating entity "VGA_MODULE" for hierarchy "VGA_MODULE:vga" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 39
 Warning (10034): Output port "SYNC_N_o" at VGA_MODULE.sv(4) has no driver File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv Line: 4
 Info (12128): Elaborating entity "CLK_DIVIDER" for hierarchy "VGA_MODULE:vga|CLK_DIVIDER:testclk" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv Line: 12
 Info (12128): Elaborating entity "SIGNAL_SYNC" for hierarchy "VGA_MODULE:vga|SIGNAL_SYNC:sync" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/VGA_MODULE.sv Line: 14
 Info (12128): Elaborating entity "H_COUNTER" for hierarchy "VGA_MODULE:vga|SIGNAL_SYNC:sync|H_COUNTER:h_signal" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SIGNAL_SYNC.sv Line: 8
 Warning (10036): Verilog HDL or VHDL warning at H_COUNTER.sv(6): object "BACK_PORCH" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/H_COUNTER.sv Line: 6
 Info (12128): Elaborating entity "V_COUNTER" for hierarchy "VGA_MODULE:vga|SIGNAL_SYNC:sync|V_COUNTER:v_signal" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SIGNAL_SYNC.sv Line: 9
-Info (12128): Elaborating entity "SpriteController" for hierarchy "SpriteController:spriteController" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 27
+Info (12128): Elaborating entity "SpriteController" for hierarchy "SpriteController:spriteController" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 44
 Warning (10036): Verilog HDL or VHDL warning at SpriteController.sv(16): object "MW_bullet1" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 16
 Warning (10036): Verilog HDL or VHDL warning at SpriteController.sv(16): object "MW_bullet2" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at SpriteController.sv(21): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 21
@@ -951,8 +1192,6 @@ Warning (10036): Verilog HDL or VHDL warning at TankController.sv(10): object "d
 Warning (10230): Verilog HDL assignment warning at TankController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at TankController.sv(16): truncated value with size 32 to match size of target (10) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at TankController.sv(18): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 18
-Warning (10272): Verilog HDL Case Statement warning at TankController.sv(30): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 30
-Warning (10272): Verilog HDL Case Statement warning at TankController.sv(31): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 31
 Info (12128): Elaborating entity "mem_tank1" for hierarchy "SpriteController:spriteController|mem_tank1:tank1_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 46
 Info (12128): Elaborating entity "altsyncram" for hierarchy "SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank1.v Line: 81
 Info (12130): Elaborated megafunction instantiation "SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank1.v Line: 81
@@ -979,8 +1218,6 @@ Warning (10036): Verilog HDL or VHDL warning at TankController.sv(10): object "d
 Warning (10230): Verilog HDL assignment warning at TankController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at TankController.sv(16): truncated value with size 32 to match size of target (10) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 16
 Warning (10230): Verilog HDL assignment warning at TankController.sv(18): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 18
-Warning (10272): Verilog HDL Case Statement warning at TankController.sv(30): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 30
-Warning (10272): Verilog HDL Case Statement warning at TankController.sv(31): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/TankController.sv Line: 31
 Info (12128): Elaborating entity "mem_tank2" for hierarchy "SpriteController:spriteController|mem_tank2:tank2_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 52
 Info (12128): Elaborating entity "altsyncram" for hierarchy "SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank2.v Line: 81
 Info (12130): Elaborated megafunction instantiation "SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_tank2.v Line: 81
@@ -1003,12 +1240,10 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_hkf1 File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/db/altsyncram_hkf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_hkf1" for hierarchy "SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component|altsyncram_hkf1:auto_generated" File: /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "ScoreController" for hierarchy "SpriteController:spriteController|ScoreController:scoreController" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 59
-Warning (10036): Verilog HDL or VHDL warning at ScoreController.sv(10): object "direction" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at ScoreController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 13
-Warning (10230): Verilog HDL assignment warning at ScoreController.sv(23): truncated value with size 32 to match size of target (16) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at ScoreController.sv(25): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 25
-Warning (10272): Verilog HDL Case Statement warning at ScoreController.sv(37): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 37
-Warning (10272): Verilog HDL Case Statement warning at ScoreController.sv(38): case item expression covers a value already covered by a previous case item File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/ScoreController.sv Line: 38
+Warning (10036): Verilog HDL or VHDL warning at ScoreController.sv(10): object "score2" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv Line: 10
+Warning (10230): Verilog HDL assignment warning at ScoreController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv Line: 13
+Warning (10230): Verilog HDL assignment warning at ScoreController.sv(23): truncated value with size 32 to match size of target (16) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv Line: 23
+Warning (10230): Verilog HDL assignment warning at ScoreController.sv(25): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ScoreController.sv Line: 25
 Info (12128): Elaborating entity "mem_score" for hierarchy "SpriteController:spriteController|mem_score:score_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 61
 Info (12128): Elaborating entity "altsyncram" for hierarchy "SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_score.v Line: 81
 Info (12130): Elaborated megafunction instantiation "SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/mem_score.v Line: 81
@@ -1032,9 +1267,16 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_0mf1" for hierarchy "SpriteController:spriteController|mem_score:score_mem|altsyncram:altsyncram_component|altsyncram_0mf1:auto_generated" File: /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "ImageComposer" for hierarchy "SpriteController:spriteController|ImageComposer:imageComposer" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/SpriteController.sv Line: 65
 Info (12128): Elaborating entity "ImageComposer_aux" for hierarchy "SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[1].ic_aux" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/ImageComposer.sv Line: 15
+Info (12128): Elaborating entity "uart_rx" for hierarchy "uart_rx:RX0" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 56
+Warning (10230): Verilog HDL assignment warning at uart_rx.v(67): truncated value with size 32 to match size of target (4) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/uart_rx.v Line: 67
+Info (12128): Elaborating entity "baudgen_rx" for hierarchy "uart_rx:RX0|baudgen_rx:baudgen0" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/uart_rx.v Line: 58
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.v(59): truncated value with size 32 to match size of target (9) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen_rx.v Line: 59
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.v(63): truncated value with size 32 to match size of target (9) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen_rx.v Line: 63
+Warning (10230): Verilog HDL assignment warning at baudgen_rx.v(67): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/uart-rx/baudgen_rx.v Line: 67
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "SYNC_N" is stuck at GND File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 8
+    Warning (13410): Pin "SYNC_N" is stuck at GND File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 9
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 2 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "TecTacToe" -- entity does not exist in design
     Warning (20014): Assignment for entity set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TecTacToe -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TecTacToe -section_id Top was ignored
@@ -1060,20 +1302,27 @@ Warning (20013): Ignored 24 assignments for entity "TecTacToe" -- entity does no
     Warning (20014): Assignment for entity set_global_assignment -name ABSORB_PATHS_FROM_OUTPUTS_TO_INPUTS ON -entity TecTacToe -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_EXTRACT_HARD_BLOCK_NODES ON -entity TecTacToe -section_id Top was ignored
     Warning (20014): Assignment for entity set_global_assignment -name PARTITION_ENABLE_STRICT_PRESERVATION OFF -entity TecTacToe -section_id Top was ignored
+Info (144001): Generated suppressed messages file /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/Graphic_controller.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 2 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "btn_i" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 7
-    Warning (15610): No output dependent on input pin "btn_confirm_i" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 7
-Info (21057): Implemented 955 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 29 output pins
-    Info (21061): Implemented 491 logic cells
+    Warning (15610): No output dependent on input pin "btn_i" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 8
+    Warning (15610): No output dependent on input pin "btn_confirm_i" File: /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/Graphic_controller.sv Line: 8
+Info (21057): Implemented 1074 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 38 output pins
+    Info (21061): Implemented 600 logic cells
     Info (21064): Implemented 432 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 75 warnings
-    Info: Peak virtual memory: 1103 megabytes
-    Info: Processing ended: Thu Nov 21 03:09:41 2019
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:29
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 73 warnings
+    Info: Peak virtual memory: 1102 megabytes
+    Info: Processing ended: Thu Nov 21 15:49:33 2019
+    Info: Elapsed time: 00:00:14
+    Info: Total CPU time (on all processors): 00:00:31
+
+
++------------------------------------------+
+; Analysis & Synthesis Suppressed Messages ;
++------------------------------------------+
+The suppressed messages can be found in /home/gsegura/Documents/taller/proyecto/proyecto/Graphic_controller/output_files/Graphic_controller.map.smsg.
 
 

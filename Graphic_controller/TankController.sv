@@ -21,22 +21,20 @@ assign visible_flag = (	(x_pos_i >= x_pos-HALF_SIZE) & (x_pos_i <  x_pos+HALF_SI
 
 						
 						
-always@(negedge clk)
+always@(posedge clk)
 begin
 	if(MW_i)
 		begin
 			case(address_i)
 			2'b00: x_pos=data_i;
-			2'b00: y_pos=data_i;
-			2'b00: direction=data_i;
+			2'b01: y_pos=data_i;
+			2'b10: direction=data_i;
 			default: begin end
 			endcase
 		end
 	
 end
-//posx
-//posy
-//dir
+
 
 initial
 begin

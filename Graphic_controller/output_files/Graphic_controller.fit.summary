@@ -1,13 +1,13 @@
-Fitter Status : Successful - Thu Nov 21 03:11:12 2019
+Fitter Status : Successful - Thu Nov 21 15:50:57 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Graphic_controller
 Top-level Entity Name : Graphic_controller
 Family : Cyclone V
 Device : 5CSEMA5F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 319 / 32,070 ( < 1 % )
-Total registers : 102
-Total pins : 32 / 457 ( 7 % )
+Logic utilization (in ALMs) : 369 / 32,070 ( 1 % )
+Total registers : 179
+Total pins : 42 / 457 ( 9 % )
 Total virtual pins : 0
 Total block memory bits : 3,194,880 / 4,065,280 ( 79 % )
 Total RAM Blocks : 390 / 397 ( 98 % )
