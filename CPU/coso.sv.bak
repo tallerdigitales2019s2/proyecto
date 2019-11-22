@@ -1,0 +1,10 @@
+module coso (input logic clk, input logic rst, output logic [31:0] result);
+	logic [31:0] DataAdr, Instr, PC, PCNext;
+	logic 	 	 MemWrite;
+
+	top top1 (.clk(clk), .reset(reset),.WriteData(result), .DataAdr(DataAdr), .Instr(Instr), .PC(PC), .PCNext(PCNext), .MemWrite(MemWrite);
+	
+	
+	
+	
+endmodule 
