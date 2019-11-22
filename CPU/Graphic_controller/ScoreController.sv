@@ -16,7 +16,7 @@ logic visible_flag_s1,visible_flag_s2;
 
 //assign RGB_o = (visible_flag_s1|visible_flag_s2)? mem_data_i:0;
 //assign RGB_o = (visible_flag1)? 24'hFF0000:0;
-assign RGB_o = (visible_flag_s1|mem_address_s2)? mem_data_i:0;
+assign RGB_o = (visible_flag_s1|mem_address_s2)? mem_data_i:1'b0;
 
 
 //assign mem_address_o = (visible_flag)? (x_pos_i-(x_pos) )+32*(y_pos_i-(y_pos))+(N<<10):0;
@@ -30,8 +30,8 @@ assign visible_flag_s2 = (	(x_pos_i >= x_pos_s2) & (x_pos_i <  x_pos_s2+32) &
 //assign visible_flag =( (x_pos_i >= x_pos_s1) & (x_pos_i <  x_pos_s1+32) & 
 //								(y_pos_i >= y_pos_s1) & (y_pos_i <  y_pos_s1+32) );
 								
-assign mem_address_s1 = (visible_flag_s1)? (x_pos_i-(x_pos_s1) )+32*(y_pos_i-(y_pos_s1))+(score1<<10):0;
-assign mem_address_s2 = (visible_flag_s2)? (x_pos_i-(x_pos_s2) )+32*(y_pos_i-(y_pos_s2))+(score2<<10):0;
+assign mem_address_s1 = (visible_flag_s1)? (x_pos_i-(x_pos_s1) )+32*(y_pos_i-(y_pos_s1))+(score1<<10):1'b0;
+assign mem_address_s2 = (visible_flag_s2)? (x_pos_i-(x_pos_s2) )+32*(y_pos_i-(y_pos_s2))+(score2<<10):1'b0;
 
 assign mem_address_o = (mem_address_s1|mem_address_s2);
 				

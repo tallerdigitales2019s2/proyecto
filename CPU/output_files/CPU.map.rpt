@@ -1,5 +1,5 @@
 Analysis & Synthesis report for CPU
-Fri Nov 22 04:41:04 2019
+Fri Nov 22 07:23:42 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -46,7 +46,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
  38. Parameter Settings for User Entity Instance: top:top1|SpriteController:spriteController|ImageComposer:imageComposer
  39. altsyncram Parameter Settings by Entity Instance
  40. Port Connectivity Checks: "top:top1|SpriteController:spriteController|WallsController:wallsController"
- 41. Port Connectivity Checks: "top:top1|MemoryManager:comb_3"
+ 41. Port Connectivity Checks: "top:top1|MemoryManager:memoryManager"
  42. Port Connectivity Checks: "top:top1|dmem:dmem_1"
  43. Port Connectivity Checks: "top:top1|arm:arm|datapath:dp|mux2_1:ra1mux"
  44. Port Connectivity Checks: "top:top1|arm:arm|datapath:dp|adder:pcadd2"
@@ -81,13 +81,13 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Fri Nov 22 04:41:04 2019       ;
+; Analysis & Synthesis Status     ; Successful - Fri Nov 22 07:23:42 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPU                                         ;
 ; Top-level Entity Name           ; coso                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Logic utilization (in ALMs)     ; N/A                                         ;
-; Total registers                 ; 2428                                        ;
+; Total registers                 ; 2427                                        ;
 ; Total pins                      ; 49                                          ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 3,194,880                                   ;
@@ -271,16 +271,16 @@ refer to the applicable agreement for further details.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimate of Logic utilization (ALMs needed) ; 2050      ;
+; Estimate of Logic utilization (ALMs needed) ; 2021      ;
 ;                                             ;           ;
-; Combinational ALUT usage for logic          ; 2295      ;
-;     -- 7 input functions                    ; 6         ;
-;     -- 6 input functions                    ; 1335      ;
-;     -- 5 input functions                    ; 130       ;
-;     -- 4 input functions                    ; 181       ;
-;     -- <=3 input functions                  ; 643       ;
+; Combinational ALUT usage for logic          ; 2339      ;
+;     -- 7 input functions                    ; 0         ;
+;     -- 6 input functions                    ; 1212      ;
+;     -- 5 input functions                    ; 152       ;
+;     -- 4 input functions                    ; 260       ;
+;     -- <=3 input functions                  ; 715       ;
 ;                                             ;           ;
-; Dedicated logic registers                   ; 2428      ;
+; Dedicated logic registers                   ; 2427      ;
 ;                                             ;           ;
 ; I/O pins                                    ; 49        ;
 ; Total MLAB memory bits                      ; 0         ;
@@ -289,9 +289,9 @@ refer to the applicable agreement for further details.
 ; Total DSP Blocks                            ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 2349      ;
-; Total fan-out                               ; 24528     ;
-; Average fan-out                             ; 4.67      ;
+; Maximum fan-out                             ; 2348      ;
+; Total fan-out                               ; 24334     ;
+; Average fan-out                             ; 4.59      ;
 +---------------------------------------------+-----------+
 
 
@@ -300,18 +300,18 @@ refer to the applicable agreement for further details.
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 ; Compilation Hierarchy Node                                    ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                                                                                        ; Entity Name       ; Library Name ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
-; |coso                                                         ; 2295 (0)            ; 2428 (0)                  ; 3194880           ; 0          ; 49   ; 0            ; |coso                                                                                                                                                      ; coso              ; work         ;
+; |coso                                                         ; 2339 (0)            ; 2427 (0)                  ; 3194880           ; 0          ; 49   ; 0            ; |coso                                                                                                                                                      ; coso              ; work         ;
 ;    |seven_segments:seven|                                     ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|seven_segments:seven                                                                                                                                 ; seven_segments    ; work         ;
-;    |top:top1|                                                 ; 2288 (0)            ; 2428 (0)                  ; 3194880           ; 0          ; 0    ; 0            ; |coso|top:top1                                                                                                                                             ; top               ; work         ;
-;       |MemoryManager:comb_3|                                  ; 74 (74)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|MemoryManager:comb_3                                                                                                                        ; MemoryManager     ; work         ;
-;       |SpriteController:spriteController|                     ; 1014 (0)            ; 152 (0)                   ; 3194880           ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController                                                                                                           ; SpriteController  ; work         ;
-;          |ImageComposer:imageComposer|                        ; 222 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer                                                                               ; ImageComposer     ; work         ;
+;    |top:top1|                                                 ; 2332 (0)            ; 2427 (0)                  ; 3194880           ; 0          ; 0    ; 0            ; |coso|top:top1                                                                                                                                             ; top               ; work         ;
+;       |MemoryManager:memoryManager|                           ; 73 (73)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|MemoryManager:memoryManager                                                                                                                 ; MemoryManager     ; work         ;
+;       |SpriteController:spriteController|                     ; 1023 (0)            ; 152 (0)                   ; 3194880           ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController                                                                                                           ; SpriteController  ; work         ;
+;          |ImageComposer:imageComposer|                        ; 186 (0)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer                                                                               ; ImageComposer     ; work         ;
 ;             |ImageComposer_aux:generate_submodules[2].ic_aux| ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[2].ic_aux                               ; ImageComposer_aux ; work         ;
 ;             |ImageComposer_aux:generate_submodules[3].ic_aux| ; 21 (21)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[3].ic_aux                               ; ImageComposer_aux ; work         ;
-;             |ImageComposer_aux:generate_submodules[4].ic_aux| ; 180 (180)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux                               ; ImageComposer_aux ; work         ;
+;             |ImageComposer_aux:generate_submodules[4].ic_aux| ; 144 (144)           ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux                               ; ImageComposer_aux ; work         ;
 ;          |ScoreController:scoreController|                    ; 150 (150)           ; 12 (12)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|ScoreController:scoreController                                                                           ; ScoreController   ; work         ;
-;          |TankController:tc1|                                 ; 326 (326)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|TankController:tc1                                                                                        ; TankController    ; work         ;
-;          |TankController:tc2|                                 ; 299 (299)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|TankController:tc2                                                                                        ; TankController    ; work         ;
+;          |TankController:tc1|                                 ; 347 (347)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|TankController:tc1                                                                                        ; TankController    ; work         ;
+;          |TankController:tc2|                                 ; 323 (323)           ; 64 (64)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|TankController:tc2                                                                                        ; TankController    ; work         ;
 ;          |WallsController:wallsController|                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|WallsController:wallsController                                                                           ; WallsController   ; work         ;
 ;          |mem_floor:floor_mem|                                ; 8 (0)               ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|mem_floor:floor_mem                                                                                       ; mem_floor         ; work         ;
 ;             |altsyncram:altsyncram_component|                 ; 8 (0)               ; 6 (0)                     ; 1572864           ; 0          ; 0    ; 0            ; |coso|top:top1|SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component                                                       ; altsyncram        ; work         ;
@@ -332,23 +332,21 @@ refer to the applicable agreement for further details.
 ;          |SIGNAL_SYNC:sync|                                   ; 87 (3)              ; 65 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|VGA_MODULE:vga|SIGNAL_SYNC:sync                                                                                                             ; SIGNAL_SYNC       ; work         ;
 ;             |H_COUNTER:h_signal|                              ; 42 (42)             ; 33 (33)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|VGA_MODULE:vga|SIGNAL_SYNC:sync|H_COUNTER:h_signal                                                                                          ; H_COUNTER         ; work         ;
 ;             |V_COUNTER:v_signal|                              ; 42 (42)             ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|VGA_MODULE:vga|SIGNAL_SYNC:sync|V_COUNTER:v_signal                                                                                          ; V_COUNTER         ; work         ;
-;       |arm:arm|                                               ; 302 (0)             ; 161 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm                                                                                                                                     ; arm               ; work         ;
-;          |controller:c|                                       ; 4 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c                                                                                                                        ; controller        ; work         ;
-;             |condlogic:cl|                                    ; 2 (0)               ; 1 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c|condlogic:cl                                                                                                           ; condlogic         ; work         ;
-;                |flopenr:flagreg1|                             ; 2 (2)               ; 1 (1)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1                                                                                          ; flopenr           ; work         ;
-;             |decoder:dec|                                     ; 2 (2)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c|decoder:dec                                                                                                            ; decoder           ; work         ;
-;          |datapath:dp|                                        ; 298 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp                                                                                                                         ; datapath          ; work         ;
-;             |ALU:alu|                                         ; 65 (65)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|ALU:alu                                                                                                                 ; ALU               ; work         ;
+;       |arm:arm|                                               ; 335 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm                                                                                                                                     ; arm               ; work         ;
+;          |controller:c|                                       ; 4 (0)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c                                                                                                                        ; controller        ; work         ;
+;             |condlogic:cl|                                    ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c|condlogic:cl                                                                                                           ; condlogic         ; work         ;
+;             |decoder:dec|                                     ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|controller:c|decoder:dec                                                                                                            ; decoder           ; work         ;
+;          |datapath:dp|                                        ; 331 (0)             ; 160 (0)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp                                                                                                                         ; datapath          ; work         ;
+;             |ALU:alu|                                         ; 47 (47)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|ALU:alu                                                                                                                 ; ALU               ; work         ;
 ;             |adder:pcadd1|                                    ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|adder:pcadd1                                                                                                            ; adder             ; work         ;
 ;             |adder:pcadd2|                                    ; 30 (30)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|adder:pcadd2                                                                                                            ; adder             ; work         ;
 ;             |flopr:pcreg|                                     ; 0 (0)               ; 32 (32)                   ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|flopr:pcreg                                                                                                             ; flopr             ; work         ;
-;             |mux2_1:ra1mux|                                   ; 1 (1)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:ra1mux                                                                                                           ; mux2_1            ; work         ;
-;             |mux2_1:ra2mux|                                   ; 3 (3)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:ra2mux                                                                                                           ; mux2_1            ; work         ;
-;             |mux2_1:resmux|                                   ; 32 (32)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:resmux                                                                                                           ; mux2_1            ; work         ;
-;             |mux2_1:srcbmux|                                  ; 11 (11)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux                                                                                                          ; mux2_1            ; work         ;
-;             |regfile:rf|                                      ; 126 (126)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|regfile:rf                                                                                                              ; regfile           ; work         ;
+;             |mux2_1:ra2mux|                                   ; 5 (5)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:ra2mux                                                                                                           ; mux2_1            ; work         ;
+;             |mux2_1:resmux|                                   ; 52 (52)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:resmux                                                                                                           ; mux2_1            ; work         ;
+;             |mux2_1:srcbmux|                                  ; 33 (33)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux                                                                                                          ; mux2_1            ; work         ;
+;             |regfile:rf|                                      ; 134 (134)           ; 128 (128)                 ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|arm:arm|datapath:dp|regfile:rf                                                                                                              ; regfile           ; work         ;
 ;       |dmem:dmem_1|                                           ; 800 (800)           ; 2048 (2048)               ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|dmem:dmem_1                                                                                                                                 ; dmem              ; work         ;
-;       |imemtb:imem|                                           ; 9 (9)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|imemtb:imem                                                                                                                                 ; imemtb            ; work         ;
+;       |imemtb:imem|                                           ; 12 (12)             ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |coso|top:top1|imemtb:imem                                                                                                                                 ; imemtb            ; work         ;
 +---------------------------------------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------------------------------------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
@@ -388,464 +386,497 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[1]                          ; Lost fanout                                 ;
 ; top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1|q[1]                          ; Lost fanout                                 ;
 ; top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg0|q[0]                          ; Lost fanout                                 ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~32                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~64                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~160                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~192                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~288                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~320                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~416                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~448                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~33                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~65                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~161                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~193                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~289                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~321                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~417                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~449                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~34                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~66                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~162                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~194                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~290                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~322                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~418                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~450                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~35                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~67                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~163                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~195                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~291                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~323                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~419                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~451                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~36                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~68                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~164                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~196                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~292                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~324                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~420                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~452                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~37                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~69                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~165                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~197                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~293                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~325                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~421                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~453                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~38                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~70                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~166                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~198                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~294                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~326                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~422                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~454                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~39                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~71                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~167                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~199                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~295                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~327                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~423                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~455                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~40                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~72                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~168                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~200                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~296                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~328                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~424                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~456                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~41                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~73                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~169                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~201                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~297                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~329                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~425                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~457                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~42                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~74                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~170                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~202                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~298                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~330                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~426                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~458                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~43                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~75                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~171                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~203                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~299                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~331                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~427                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~459                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~44                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~76                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~172                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~204                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~300                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~332                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~428                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~460                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~45                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~77                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~173                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~205                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~301                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~333                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~429                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~461                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~46                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~78                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~174                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~206                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~302                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~334                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~430                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~462                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~47                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~79                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~175                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~207                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~303                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~335                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~431                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~463                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~48                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~80                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~176                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~208                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~304                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~336                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~432                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~464                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~49                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~81                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~177                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~209                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~305                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~337                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~433                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~465                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~50                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~82                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~178                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~210                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~306                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~338                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~434                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~466                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~51                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~83                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~179                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~211                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~307                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~339                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~435                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~467                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~52                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~84                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~180                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~212                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~308                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~340                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~436                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~468                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~53                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~85                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~181                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~213                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~309                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~341                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~437                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~469                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~54                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~86                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~182                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~214                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~310                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~342                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~438                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~470                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~55                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~87                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~183                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~215                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~311                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~343                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~439                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~471                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~56                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~88                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~184                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~216                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~312                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~344                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~440                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~472                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~57                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~89                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~185                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~217                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~313                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~345                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~441                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~473                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~58                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~90                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~186                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~218                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~314                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~346                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~442                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~474                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~59                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~91                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~187                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~219                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~315                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~347                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~443                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~475                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~60                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~92                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~188                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~220                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~316                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~348                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~444                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~476                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~61                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~93                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~189                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~221                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~317                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~349                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~445                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~477                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~62                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~94                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~190                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~222                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~318                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~350                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~446                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~478                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~63                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~95                                             ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~191                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~223                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~319                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~351                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~447                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~479                                            ; Stuck at GND due to stuck port data_in      ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~384                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~256                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~320                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~352                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~385                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~257                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~256                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~288                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~448                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~384                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~416                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~321                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~449                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~353                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~386                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~258                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~257                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~385                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~289                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~417                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~322                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~354                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~387                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~259                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~258                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~290                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~450                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~386                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~418                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~323                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~451                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~355                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~388                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~260                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~356                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~389                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~261                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~357                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~390                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~262                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~358                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~391                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~263                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~359                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~392                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~264                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~360                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~393                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~265                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~361                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~415                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~287                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~383                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~414                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~286                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~382                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~413                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~285                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~381                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~412                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~284                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~380                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~411                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~283                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~379                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~394                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~266                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~259                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~387                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~291                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~419                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~330                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~362                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~395                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~267                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~266                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~298                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~458                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~394                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~426                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~331                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~459                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~363                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~396                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~268                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~364                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~397                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~269                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~365                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~398                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~270                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~366                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~399                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~271                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~367                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~400                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~272                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~368                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~401                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~273                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~369                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~402                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~274                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~370                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~403                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~275                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~371                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~404                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~276                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~372                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~405                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~277                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~373                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~406                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~278                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~374                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~407                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~279                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~375                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~408                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~280                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~376                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~409                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~281                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~377                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~410                                            ; Stuck at GND due to stuck port clock_enable ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~282                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~267                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~395                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~299                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~427                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~324                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~356                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~260                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~292                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~452                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~388                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~420                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~325                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~453                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~357                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~261                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~389                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~293                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~421                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~326                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~358                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~262                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~294                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~454                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~390                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~422                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~327                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~455                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~359                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~263                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~391                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~295                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~423                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~329                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~457                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~361                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~265                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~393                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~297                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~425                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~328                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~360                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~264                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~296                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~456                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~392                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~424                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~351                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~479                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~383                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~287                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~415                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~319                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~447                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~350                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~382                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~286                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~318                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~478                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~414                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~446                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~349                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~477                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~381                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~285                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~413                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~317                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~445                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~348                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~380                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~284                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~316                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~476                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~412                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~444                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~347                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~475                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~379                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~283                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~411                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~315                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~443                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~346                                            ; Stuck at GND due to stuck port clock_enable ;
 ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~378                                            ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 387                                                   ;                                             ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~282                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~314                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~474                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~410                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~442                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~345                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~473                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~377                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~281                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~409                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~313                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~441                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~344                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~376                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~280                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~312                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~472                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~408                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~440                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~343                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~471                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~375                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~279                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~407                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~311                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~439                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~342                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~374                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~278                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~310                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~470                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~406                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~438                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~341                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~469                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~373                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~277                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~405                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~309                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~437                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~340                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~372                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~276                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~308                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~468                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~404                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~436                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~339                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~467                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~371                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~275                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~403                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~307                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~435                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~338                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~370                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~274                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~306                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~466                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~402                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~434                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~337                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~465                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~369                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~273                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~401                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~305                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~433                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~336                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~368                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~272                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~304                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~464                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~400                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~432                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~335                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~463                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~367                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~271                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~399                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~303                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~431                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~334                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~366                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~270                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~302                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~462                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~398                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~430                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~333                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~461                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~365                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~269                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~397                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~301                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~429                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~332                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~364                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~268                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~300                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~460                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~396                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~428                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1|q[0]                          ; Stuck at GND due to stuck port data_in      ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~0                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~64                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~192                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~128                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~65                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~193                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~1                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~129                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~66                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~2                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~194                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~130                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~67                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~195                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~3                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~131                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~74                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~10                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~202                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~138                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~75                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~203                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~11                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~139                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~4                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~68                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~196                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~132                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~5                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~69                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~197                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~133                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~70                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~6                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~198                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~134                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~71                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~199                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~7                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~135                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~9                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~73                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~201                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~137                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~8                                              ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~72                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~200                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~136                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~95                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~223                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~31                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~159                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~94                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~30                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~222                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~158                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~93                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~221                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~29                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~157                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~92                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~28                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~220                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~156                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~91                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~219                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~27                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~155                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~90                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~26                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~218                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~154                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~89                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~217                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~25                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~153                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~88                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~24                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~216                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~152                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~87                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~215                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~23                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~151                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~86                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~22                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~214                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~150                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~85                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~213                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~21                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~149                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~84                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~20                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~212                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~148                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~83                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~211                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~19                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~147                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~82                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~18                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~210                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~146                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~81                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~209                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~17                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~145                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~16                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~80                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~208                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~144                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~15                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~79                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~207                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~143                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~78                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~14                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~206                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~142                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~77                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~205                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~13                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~141                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~76                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~12                                             ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~204                                            ; Stuck at GND due to stuck port clock_enable ;
+; top:top1|arm:arm|datapath:dp|regfile:rf|rf~140                                            ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 388                                                   ;                                             ;
 +-------------------------------------------------------------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                 ;
-+-----------------------------------------------+---------------------------+-------------------------------------------------+
-; Register name                                 ; Reason for Removal        ; Registers Removed due to This Register          ;
-+-----------------------------------------------+---------------------------+-------------------------------------------------+
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~62 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~415, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~287, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~383, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~414, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~286, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~382  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~47 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~399, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~271, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~367  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~61 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~413, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~285, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~381  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~60 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~412, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~284, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~380  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~59 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~411, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~283, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~379  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~58 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~410, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~282, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~378  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~57 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~409, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~281, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~377  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~56 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~408, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~280, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~376  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~55 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~407, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~279, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~375  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~54 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~406, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~278, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~374  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~53 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~405, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~277, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~373  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~52 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~404, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~276, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~372  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~51 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~403, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~275, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~371  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~50 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~402, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~274, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~370  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~49 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~401, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~273, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~369  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~48 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~400, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~272, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~368  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~32 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~384, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~256, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~352  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~46 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~398, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~270, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~366  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~45 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~397, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~269, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~365  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~44 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~396, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~268, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~364  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~43 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~395, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~267, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~363  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~42 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~394, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~266, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~362  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~41 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~393, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~265, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~361  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~40 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~392, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~264, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~360  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~39 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~391, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~263, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~359  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~38 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~390, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~262, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~358  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~37 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~389, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~261, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~357  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~36 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~388, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~260, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~356  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~35 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~387, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~259, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~355  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~34 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~386, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~258, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~354  ;
-; top:top1|arm:arm|datapath:dp|regfile:rf|rf~33 ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~385, ;
-;                                               ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~257, ;
-;                                               ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~353  ;
-+-----------------------------------------------+---------------------------+-------------------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                    ;
++------------------------------------------------------------------+---------------------------+-------------------------------------------------+
+; Register name                                                    ; Reason for Removal        ; Registers Removed due to This Register          ;
++------------------------------------------------------------------+---------------------------+-------------------------------------------------+
+; top:top1|arm:arm|controller:c|condlogic:cl|flopenr:flagreg1|q[0] ; Stuck at GND              ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~0,   ;
+;                                                                  ; due to stuck port data_in ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~64,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~192, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~128, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~65,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~193, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~1,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~129, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~66,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~2,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~194, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~130, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~67,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~195, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~3,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~131, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~74,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~10,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~202, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~138, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~75,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~203, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~11,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~139, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~4,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~68,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~196, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~132, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~5,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~69,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~197, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~133, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~70,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~6,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~198, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~134, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~71,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~199, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~7,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~135, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~9,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~73,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~201, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~137, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~8,   ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~72,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~200, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~136, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~95,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~223, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~31,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~159, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~94,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~30,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~222, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~158, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~93,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~221, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~29,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~157, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~92,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~28,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~220, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~156, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~91,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~219, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~27,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~155, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~90,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~26,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~218, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~154, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~89,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~217, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~25,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~153, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~88,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~24,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~216, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~152, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~87,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~215, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~23,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~151, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~86,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~22,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~214, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~150, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~85,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~213, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~21,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~149, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~84,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~20,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~212, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~148, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~83,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~211, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~19,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~147, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~82,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~18,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~210, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~146, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~81,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~209, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~17,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~145, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~16,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~80,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~208, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~144, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~15,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~79,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~207, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~143, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~78,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~14,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~206, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~142, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~77,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~205, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~13,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~141, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~76,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~12,  ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~204, ;
+;                                                                  ;                           ; top:top1|arm:arm|datapath:dp|regfile:rf|rf~140  ;
++------------------------------------------------------------------+---------------------------+-------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -853,7 +884,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 2428  ;
+; Total registers                              ; 2427  ;
 ; Number of registers using Synchronous Clear  ; 64    ;
 ; Number of registers using Synchronous Load   ; 30    ;
 ; Number of registers using Asynchronous Clear ; 0     ;
@@ -868,20 +899,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------------------------------------+---------+
 ; Inverted Register                                                                    ; Fan out ;
 +--------------------------------------------------------------------------------------+---------+
-; top:top1|SpriteController:spriteController|TankController:tc2|y_pos[2]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc2|y_pos[1]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[1]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[4]               ; 5       ;
+; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[4]               ; 5       ;
+; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[3]               ; 3       ;
 ; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[1]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[0]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[2]               ; 2       ;
+; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[2]               ; 3       ;
 ; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[1]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[0]               ; 2       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[4]               ; 5       ;
+; top:top1|SpriteController:spriteController|TankController:tc2|y_pos[2]               ; 2       ;
+; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[4]               ; 5       ;
+; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[3]               ; 3       ;
+; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[6]               ; 3       ;
+; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[6]               ; 2       ;
 ; top:top1|SpriteController:spriteController|TankController:tc2|y_pos[6]               ; 2       ;
+; top:top1|SpriteController:spriteController|TankController:tc2|y_pos[5]               ; 2       ;
+; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[6]               ; 3       ;
 ; top:top1|SpriteController:spriteController|TankController:tc2|x_pos[5]               ; 3       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|x_pos[5]               ; 3       ;
-; top:top1|SpriteController:spriteController|TankController:tc1|y_pos[5]               ; 2       ;
 ; top:top1|SpriteController:spriteController|ScoreController:scoreController|score1[1] ; 5       ;
 ; top:top1|SpriteController:spriteController|ScoreController:scoreController|score1[0] ; 1       ;
 ; Total number of inverted registers = 16                                              ;         ;
@@ -893,13 +924,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                                                             ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux|yOut[16]                                                                             ;
-; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|ALU:alu|Mux15                                                                                       ;
-; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:resmux|yOut[31]                                                                              ;
-; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux|yOut[10]                                                                             ;
+; 3:1                ; 3 bits    ; 6 LEs         ; 6 LEs                ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux|yOut[15]                                                                             ;
+; 4:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|ALU:alu|Mux17                                                                                       ;
+; 3:1                ; 32 bits   ; 64 LEs        ; 64 LEs               ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:resmux|yOut[4]                                                                               ;
 ; 4:1                ; 2 bits    ; 4 LEs         ; 4 LEs                ; 0 LEs                  ; No         ; |coso|top:top1|arm:arm|datapath:dp|mux2_1:srcbmux|yOut[9]                                                                              ;
 ; 9:1                ; 24 bits   ; 144 LEs       ; 144 LEs              ; 0 LEs                  ; No         ; |coso|top:top1|SpriteController:spriteController|ScoreController:scoreController|RGB_o[2]                                              ;
-; 12:1               ; 24 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux|RGB_o[14] ;
+; 12:1               ; 24 bits   ; 192 LEs       ; 192 LEs              ; 0 LEs                  ; No         ; |coso|top:top1|SpriteController:spriteController|ImageComposer:imageComposer|ImageComposer_aux:generate_submodules[4].ic_aux|RGB_o[16] ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1410,17 +1440,17 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------+-------+----------+-------------------------------------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "top:top1|MemoryManager:comb_3"   ;
-+----------------+--------+----------+------------------------+
-; Port           ; Type   ; Severity ; Details                ;
-+----------------+--------+----------+------------------------+
-; MR_i           ; Input  ; Info     ; Stuck at VCC           ;
-; mem_MR_o       ; Output ; Info     ; Explicitly unconnected ;
-; uart_address_o ; Output ; Info     ; Explicitly unconnected ;
-; uart_data_i    ; Input  ; Info     ; Explicitly unconnected ;
-; uart_MR_o      ; Output ; Info     ; Explicitly unconnected ;
-+----------------+--------+----------+------------------------+
++------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top1|MemoryManager:memoryManager" ;
++----------------+--------+----------+-----------------------------+
+; Port           ; Type   ; Severity ; Details                     ;
++----------------+--------+----------+-----------------------------+
+; MR_i           ; Input  ; Info     ; Stuck at VCC                ;
+; mem_MR_o       ; Output ; Info     ; Explicitly unconnected      ;
+; uart_address_o ; Output ; Info     ; Explicitly unconnected      ;
+; uart_data_i    ; Input  ; Info     ; Explicitly unconnected      ;
+; uart_MR_o      ; Output ; Info     ; Explicitly unconnected      ;
++----------------+--------+----------+-----------------------------+
 
 
 +-------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -1428,7 +1458,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 ; Port ; Type  ; Severity ; Details                                                                                                                                       ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
-; a    ; Input ; Warning  ; Input port expression (30 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "a[31..30]" will be connected to GND. ;
+; a    ; Input ; Warning  ; Input port expression (10 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "a[31..10]" will be connected to GND. ;
 +------+-------+----------+-----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -1463,20 +1493,20 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------+-------+----------+-----------------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "top:top1"                                                                                                                                               ;
-+-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; Port            ; Type   ; Severity ; Details                                                                                                                                      ;
-+-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
-; WriteData       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; DataAdr[31..10] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; Instr           ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; PC              ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; PCNext          ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; MemWrite        ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
-; rx              ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
-; rx_led          ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
-+-----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "top:top1"                                                                                                                                              ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; Port           ; Type   ; Severity ; Details                                                                                                                                      ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
+; WriteData      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; DataAdr[31..4] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; Instr[31..10]  ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; PC             ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; PCNext         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; MemWrite       ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; rx             ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; rx_led         ; Output ; Warning  ; Declared by entity but not connected by instance. Logic that only feeds a dangling port will be removed.                                     ;
++----------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -1484,36 +1514,34 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; arriav_ff             ; 2428                        ;
+; arriav_ff             ; 2427                        ;
 ;     ENA               ; 2318                        ;
 ;     ENA SCLR          ; 32                          ;
 ;     SCLR              ; 32                          ;
 ;     SLD               ; 30                          ;
-;     plain             ; 16                          ;
-; arriav_lcell_comb     ; 2297                        ;
-;     arith             ; 402                         ;
+;     plain             ; 15                          ;
+; arriav_lcell_comb     ; 2342                        ;
+;     arith             ; 403                         ;
 ;         1 data inputs ; 344                         ;
 ;         2 data inputs ; 18                          ;
-;         3 data inputs ; 8                           ;
+;         3 data inputs ; 9                           ;
 ;         5 data inputs ; 32                          ;
-;     extend            ; 6                           ;
-;         7 data inputs ; 6                           ;
-;     normal            ; 1833                        ;
+;     normal            ; 1883                        ;
 ;         0 data inputs ; 1                           ;
-;         1 data inputs ; 19                          ;
-;         2 data inputs ; 172                         ;
-;         3 data inputs ; 27                          ;
-;         4 data inputs ; 181                         ;
-;         5 data inputs ; 98                          ;
-;         6 data inputs ; 1335                        ;
+;         1 data inputs ; 16                          ;
+;         2 data inputs ; 234                         ;
+;         3 data inputs ; 40                          ;
+;         4 data inputs ; 260                         ;
+;         5 data inputs ; 120                         ;
+;         6 data inputs ; 1212                        ;
 ;     shared            ; 56                          ;
 ;         1 data inputs ; 4                           ;
 ;         2 data inputs ; 52                          ;
 ; boundary_port         ; 49                          ;
 ; stratixv_ram_block    ; 432                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 12.90                       ;
-; Average LUT depth     ; 7.50                        ;
+; Max LUT depth         ; 12.70                       ;
+; Average LUT depth     ; 7.21                        ;
 +-----------------------+-----------------------------+
 
 
@@ -1532,7 +1560,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Fri Nov 22 04:40:45 2019
+    Info: Processing started: Fri Nov 22 07:23:21 2019
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off CPU -c CPU
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1651,7 +1679,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file seven_s
     Info (12023): Found entity 1: seven_segments File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/seven_segments.sv Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file coso.sv
     Info (12023): Found entity 1: coso File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 1
-Critical Warning (10846): Verilog HDL Instantiation warning at top.sv(45): instance has no name File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 45
 Info (12127): Elaborating entity "coso" for the top level hierarchy
 Warning (10036): Verilog HDL or VHDL warning at coso.sv(19): object "test" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 19
 Info (12128): Elaborating entity "top" for hierarchy "top:top1" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 24
@@ -1671,19 +1698,12 @@ Info (12128): Elaborating entity "regfile" for hierarchy "top:top1|arm:arm|datap
 Info (12128): Elaborating entity "extend" for hierarchy "top:top1|arm:arm|datapath:dp|extend:ext" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv Line: 34
 Info (12128): Elaborating entity "ALU" for hierarchy "top:top1|arm:arm|datapath:dp|ALU:alu" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv Line: 37
 Info (12128): Elaborating entity "imemtb" for hierarchy "top:top1|imemtb:imem" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 23
-Warning (10850): Verilog HDL warning at imemtb.sv(7): number of words (4) in memory file does not match the number of elements in the address range [0:63] File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv Line: 7
+Warning (10850): Verilog HDL warning at imemtb.sv(7): number of words (6) in memory file does not match the number of elements in the address range [0:63] File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv Line: 7
 Warning (10030): Net "RAM.data_a" at imemtb.sv(4) has no driver or initial value, using a default initial value '0' File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv Line: 4
 Warning (10030): Net "RAM.waddr_a" at imemtb.sv(4) has no driver or initial value, using a default initial value '0' File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv Line: 4
 Warning (10030): Net "RAM.we_a" at imemtb.sv(4) has no driver or initial value, using a default initial value '0' File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv Line: 4
 Info (12128): Elaborating entity "dmem" for hierarchy "top:top1|dmem:dmem_1" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 36
-Info (12128): Elaborating entity "MemoryManager" for hierarchy "top:top1|MemoryManager:comb_3" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 45
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(22): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 22
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(23): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(24): truncated value with size 32 to match size of target (30) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(29): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 29
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(30): truncated value with size 32 to match size of target (30) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 30
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(36): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 36
-Warning (10230): Verilog HDL assignment warning at MemoryManager.sv(37): truncated value with size 32 to match size of target (30) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv Line: 37
+Info (12128): Elaborating entity "MemoryManager" for hierarchy "top:top1|MemoryManager:memoryManager" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 45
 Info (12128): Elaborating entity "VGA_MODULE" for hierarchy "top:top1|VGA_MODULE:vga" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 55
 Warning (10034): Output port "SYNC_N_o" at VGA_MODULE.sv(4) has no driver File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv Line: 4
 Info (12128): Elaborating entity "CLK_DIVIDER" for hierarchy "top:top1|VGA_MODULE:vga|CLK_DIVIDER:testclk" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv Line: 12
@@ -1694,13 +1714,7 @@ Info (12128): Elaborating entity "V_COUNTER" for hierarchy "top:top1|VGA_MODULE:
 Info (12128): Elaborating entity "SpriteController" for hierarchy "top:top1|SpriteController:spriteController" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv Line: 60
 Warning (10036): Verilog HDL or VHDL warning at SpriteController.sv(16): object "MW_bullet1" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 16
 Warning (10036): Verilog HDL or VHDL warning at SpriteController.sv(16): object "MW_bullet2" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at SpriteController.sv(21): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 21
-Warning (10230): Verilog HDL assignment warning at SpriteController.sv(23): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 23
-Warning (10230): Verilog HDL assignment warning at SpriteController.sv(24): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 24
-Warning (10230): Verilog HDL assignment warning at SpriteController.sv(25): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 25
-Warning (10230): Verilog HDL assignment warning at SpriteController.sv(26): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 26
 Info (12128): Elaborating entity "FloorController" for hierarchy "top:top1|SpriteController:spriteController|FloorController:floorController" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 33
-Warning (10230): Verilog HDL assignment warning at FloorController.sv(11): truncated value with size 32 to match size of target (16) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/FloorController.sv Line: 11
 Info (12128): Elaborating entity "mem_floor" for hierarchy "top:top1|SpriteController:spriteController|mem_floor:floor_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 35
 Info (12128): Elaborating entity "altsyncram" for hierarchy "top:top1|SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v Line: 81
 Info (12130): Elaborated megafunction instantiation "top:top1|SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v Line: 81
@@ -1729,13 +1743,9 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/mux_
     Info (12023): Found entity 1: mux_bhb File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/db/mux_bhb.tdf Line: 22
 Info (12128): Elaborating entity "mux_bhb" for hierarchy "top:top1|SpriteController:spriteController|mem_floor:floor_mem|altsyncram:altsyncram_component|altsyncram_rhf1:auto_generated|mux_bhb:mux2" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/db/altsyncram_rhf1.tdf Line: 41
 Info (12128): Elaborating entity "WallsController" for hierarchy "top:top1|SpriteController:spriteController|WallsController:wallsController" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 39
-Warning (10230): Verilog HDL assignment warning at WallsController.sv(10): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at WallsController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv Line: 13
 Info (12128): Elaborating entity "TankController" for hierarchy "top:top1|SpriteController:spriteController|TankController:tc1" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 45
 Warning (10036): Verilog HDL or VHDL warning at TankController.sv(10): object "direction" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at TankController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at TankController.sv(16): truncated value with size 32 to match size of target (10) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at TankController.sv(18): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 18
 Info (12128): Elaborating entity "mem_tank1" for hierarchy "top:top1|SpriteController:spriteController|mem_tank1:tank1_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 47
 Info (12128): Elaborating entity "altsyncram" for hierarchy "top:top1|SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v Line: 81
 Info (12130): Elaborated megafunction instantiation "top:top1|SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v Line: 81
@@ -1759,9 +1769,7 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
 Info (12128): Elaborating entity "altsyncram_gkf1" for hierarchy "top:top1|SpriteController:spriteController|mem_tank1:tank1_mem|altsyncram:altsyncram_component|altsyncram_gkf1:auto_generated" File: /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "TankController" for hierarchy "top:top1|SpriteController:spriteController|TankController:tc2" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 51
 Warning (10036): Verilog HDL or VHDL warning at TankController.sv(10): object "direction" assigned a value but never read File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 10
-Warning (10230): Verilog HDL assignment warning at TankController.sv(13): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 13
 Warning (10230): Verilog HDL assignment warning at TankController.sv(16): truncated value with size 32 to match size of target (10) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 16
-Warning (10230): Verilog HDL assignment warning at TankController.sv(18): truncated value with size 32 to match size of target (1) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv Line: 18
 Info (12128): Elaborating entity "mem_tank2" for hierarchy "top:top1|SpriteController:spriteController|mem_tank2:tank2_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 53
 Info (12128): Elaborating entity "altsyncram" for hierarchy "top:top1|SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v Line: 81
 Info (12130): Elaborated megafunction instantiation "top:top1|SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v Line: 81
@@ -1784,7 +1792,6 @@ Info (12021): Found 1 design units, including 1 entities, in source file db/alts
     Info (12023): Found entity 1: altsyncram_hkf1 File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/db/altsyncram_hkf1.tdf Line: 27
 Info (12128): Elaborating entity "altsyncram_hkf1" for hierarchy "top:top1|SpriteController:spriteController|mem_tank2:tank2_mem|altsyncram:altsyncram_component|altsyncram_hkf1:auto_generated" File: /opt/altera/18.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 791
 Info (12128): Elaborating entity "ScoreController" for hierarchy "top:top1|SpriteController:spriteController|ScoreController:scoreController" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 60
-Warning (10230): Verilog HDL assignment warning at ScoreController.sv(19): truncated value with size 32 to match size of target (24) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv Line: 19
 Warning (10230): Verilog HDL assignment warning at ScoreController.sv(33): truncated value with size 32 to match size of target (16) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv Line: 33
 Warning (10230): Verilog HDL assignment warning at ScoreController.sv(34): truncated value with size 32 to match size of target (16) File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv Line: 34
 Info (12128): Elaborating entity "mem_score" for hierarchy "top:top1|SpriteController:spriteController|mem_score:score_mem" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv Line: 62
@@ -1819,6 +1826,7 @@ Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File 
 Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "SYNC_N" is stuck at GND File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 7
+    Warning (13410): Pin "address_tail[2]" is stuck at GND File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 8
 Info (286030): Timing-Driven Synthesis is running
 Info (17049): 35 registers lost all their fanouts during netlist optimizations.
 Warning (20013): Ignored 24 assignments for entity "TecTacToe" -- entity does not exist in design
@@ -1851,16 +1859,16 @@ Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 1 input pin(s) that do not drive logic
     Warning (15610): No output dependent on input pin "rst" File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/coso.sv Line: 3
-Info (21057): Implemented 5121 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 5168 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 3 input pins
     Info (21059): Implemented 46 output pins
-    Info (21061): Implemented 4640 logic cells
+    Info (21061): Implemented 4687 logic cells
     Info (21064): Implemented 432 RAM segments
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 82 warnings
-    Info: Peak virtual memory: 1111 megabytes
-    Info: Processing ended: Fri Nov 22 04:41:04 2019
-    Info: Elapsed time: 00:00:19
-    Info: Total CPU time (on all processors): 00:00:35
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 62 warnings
+    Info: Peak virtual memory: 1115 megabytes
+    Info: Processing ended: Fri Nov 22 07:23:42 2019
+    Info: Elapsed time: 00:00:21
+    Info: Total CPU time (on all processors): 00:00:37
 
 
 +------------------------------------------+

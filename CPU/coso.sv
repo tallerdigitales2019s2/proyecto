@@ -11,7 +11,7 @@ output logic[9:0] address_tail;
 
 logic [31:0] result;
 
-assign address_tail= DataAdr[9:0];
+assign address_tail= Instr[9:0];
 
 
 logic [31:0] DataAdr, Instr, PC, PCNext;

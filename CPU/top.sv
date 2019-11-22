@@ -28,7 +28,7 @@ logic[31:0] data_i,address_i,mem_data_i,uart_data_i;
 
 logic mem_MR,mem_MW,sm_MW,uart_MR;
 logic[31:0] data_o,mem_data_o,sm_data_o;
-logic [29:0] uart_address,sm_address,mem_address;
+logic [9:0] uart_address,sm_address,mem_address;
 logic MemRead=1;
 
 //dmem dmem_1(clk, MemWrite, DataAdr, WriteData, ReadData);
@@ -38,14 +38,13 @@ dmem dmem_1(.clk(clk), .we(mem_MW), .a(mem_address), .wd(mem_data_o), .rd(mem_da
 
 
 
-MemoryManager(.MR_i(MemRead),.MW_i(MemWrite),.data_i(WriteData),.address_i(DataAdr),.data_o(ReadData), 
+MemoryManager memoryManager(.MR_i(MemRead),.MW_i(MemWrite),.data_i(WriteData),.address_i(DataAdr),.data_o(ReadData), 
 							.mem_address_o(mem_address), .mem_data_i(mem_data_i),.mem_data_o(mem_data_o), .mem_MR_o(), .mem_MW_o(mem_MW),
 							.sm_address_o(sm_address), .sm_data_o(sm_data_o), .sm_MW_o(sm_MW),
 							.uart_address_o(), .uart_data_i(), .uart_MR_o()
 							);
 
-							
-							
+														
 logic [31:0] x_pos,y_pos;
 logic [23:0] RGB;
 VGA_MODULE vga( 	.clk(clk_50Mhz), .vga_clock(vga_clk), .SYNC_N_o(SYNC_N),  

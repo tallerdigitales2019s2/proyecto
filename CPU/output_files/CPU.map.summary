@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Fri Nov 22 04:41:04 2019
+Analysis & Synthesis Status : Successful - Fri Nov 22 07:23:42 2019
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : CPU
 Top-level Entity Name : coso
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 2428
+Total registers : 2427
 Total pins : 49
 Total virtual pins : 0
 Total block memory bits : 3,194,880

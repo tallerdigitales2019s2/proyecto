@@ -8,7 +8,7 @@ input logic [23:0] mem_data_i;
 assign RGB_o = mem_data_i;
 
 
-assign mem_address_o = (x_pos_i[7:0])+((y_pos_i[7:0])*256);
+assign mem_address_o = (x_pos_i[7:0])+((y_pos_i[7:0])<<8);
 
 
 endmodule

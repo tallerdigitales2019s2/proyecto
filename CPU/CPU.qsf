@@ -69,57 +69,6 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to segments[6]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to segments[5]
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to segments
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to rst
-set_global_assignment -name VERILOG_FILE "Graphic_controller/uart-rx/baudgen_rx.v"
-set_global_assignment -name VERILOG_FILE "Graphic_controller/uart-rx/uart_rx.v"
-set_global_assignment -name QIP_FILE Graphic_controller/mem_floor.qip
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_aux_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_aux.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/H_COUNTER_TB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/H_COUNTER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/Graphic_controller.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/FloorController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/CLOCK_DIVIDER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/CLK_DIVIDER.sv
-set_global_assignment -name QIP_FILE Graphic_controller/mem_score.qip
-set_global_assignment -name QIP_FILE Graphic_controller/mem_tank1.qip
-set_global_assignment -name QIP_FILE Graphic_controller/mem_tank2.qip
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/WallsController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/vgaController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/VGA_MODULE_TB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/VGA_MODULE.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/V_COUNTER_TB.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/V_COUNTER.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/TankController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/SpriteController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/SIGNAL_SYNC.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ScoreController.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/MemoryManager_tb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/MemoryManager.sv
-set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
-set_global_assignment -name SYSTEMVERILOG_FILE condcheck.sv
-set_global_assignment -name SYSTEMVERILOG_FILE condlogic.sv
-set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
-set_global_assignment -name SYSTEMVERILOG_FILE dmem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
-set_global_assignment -name SYSTEMVERILOG_FILE flopr.sv
-set_global_assignment -name SYSTEMVERILOG_FILE flopenr.sv
-set_global_assignment -name SYSTEMVERILOG_FILE extend.sv
-set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
-set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
-set_global_assignment -name SYSTEMVERILOG_FILE top.sv
-set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
-set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux16_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
-set_global_assignment -name SYSTEMVERILOG_FILE imemtb.sv
-set_global_assignment -name SYSTEMVERILOG_FILE testbenchCPU.sv
-set_global_assignment -name SYSTEMVERILOG_FILE seven_segments.sv
-set_global_assignment -name SYSTEMVERILOG_FILE coso.sv
 set_location_assignment PIN_F13 -to R[7]
 set_location_assignment PIN_E12 -to R[6]
 set_location_assignment PIN_D12 -to R[5]
@@ -156,9 +105,6 @@ set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -entity TecTacToe -sec
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -entity TecTacToe -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -entity TecTacToe -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -entity TecTacToe -section_id Top
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AF14 -to clk_50Mhz
 set_location_assignment PIN_A11 -to vga_clk
 set_location_assignment PIN_V16 -to address_tail[0]
@@ -212,4 +158,58 @@ set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to V_SYNC
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to v_en
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to vga_clk
 set_instance_assignment -name IO_STANDARD "3.3-V LVCMOS" -to clk_50Mhz
+set_global_assignment -name VERILOG_FILE "Graphic_controller/uart-rx/baudgen_rx.v"
+set_global_assignment -name VERILOG_FILE "Graphic_controller/uart-rx/uart_rx.v"
+set_global_assignment -name QIP_FILE Graphic_controller/mem_floor.qip
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_aux_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer_aux.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ImageComposer.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/H_COUNTER_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/H_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/Graphic_controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/FloorController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/CLOCK_DIVIDER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/CLK_DIVIDER.sv
+set_global_assignment -name QIP_FILE Graphic_controller/mem_score.qip
+set_global_assignment -name QIP_FILE Graphic_controller/mem_tank1.qip
+set_global_assignment -name QIP_FILE Graphic_controller/mem_tank2.qip
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/WallsController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/vgaController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/VGA_MODULE_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/VGA_MODULE.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/V_COUNTER_TB.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/V_COUNTER.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/TankController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/SpriteController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/SIGNAL_SYNC.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/ScoreController.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/MemoryManager_tb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE Graphic_controller/MemoryManager.sv
+set_global_assignment -name SYSTEMVERILOG_FILE arm.sv
+set_global_assignment -name SYSTEMVERILOG_FILE condcheck.sv
+set_global_assignment -name SYSTEMVERILOG_FILE condlogic.sv
+set_global_assignment -name SYSTEMVERILOG_FILE controller.sv
+set_global_assignment -name SYSTEMVERILOG_FILE dmem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE decoder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE datapath.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flopr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE flopenr.sv
+set_global_assignment -name SYSTEMVERILOG_FILE extend.sv
+set_global_assignment -name SYSTEMVERILOG_FILE imem.sv
+set_global_assignment -name SYSTEMVERILOG_FILE regfile.sv
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE adder.sv
+set_global_assignment -name SYSTEMVERILOG_FILE alu.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux2_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux4_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux16_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mux8_1.sv
+set_global_assignment -name SYSTEMVERILOG_FILE imemtb.sv
+set_global_assignment -name SYSTEMVERILOG_FILE testbenchCPU.sv
+set_global_assignment -name SYSTEMVERILOG_FILE seven_segments.sv
+set_global_assignment -name SYSTEMVERILOG_FILE coso.sv
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

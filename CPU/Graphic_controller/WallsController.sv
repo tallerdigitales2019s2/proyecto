@@ -8,9 +8,9 @@ logic visible_flag;
 
 
 assign visible_flag = (	(x_pos_i >= wall_pos[0]) & (x_pos_i <  wall_pos[1]) & 
-								(y_pos_i >= wall_pos[2]) & (y_pos_i <  wall_pos[3]) ) ? 1 : 0;
+								(y_pos_i >= wall_pos[2]) & (y_pos_i <  wall_pos[3]) ) ? 1'b1 : 1'b0;
 
-assign RGB_o = (visible_flag)? 24'h15688E:0;
+assign RGB_o = (visible_flag)? 24'h15688E:1'b0;
 
 
 

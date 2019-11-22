@@ -1,0 +1,1289 @@
+# do CPU_run_msim_rtl_verilog.do
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Model Technology ModelSim - Intel FPGA Edition vmap 10.5b Lib Mapping Utility 2016.10 Oct  5 2016
+# vmap work rtl_work 
+# Copying /opt/altera/18.1/modelsim_ase/linuxaloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# 
+# vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v 
+# -- Compiling module mem_floor
+# 
+# Top level modules:
+# 	mem_floor
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v 
+# -- Compiling module mem_score
+# 
+# Top level modules:
+# 	mem_score
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v 
+# -- Compiling module mem_tank1
+# 
+# Top level modules:
+# 	mem_tank1
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v 
+# -- Compiling module mem_tank2
+# 
+# Top level modules:
+# 	mem_tank2
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer_aux.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer_aux.sv 
+# -- Compiling module ImageComposer_aux
+# 
+# Top level modules:
+# 	ImageComposer_aux
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer.sv 
+# -- Compiling module ImageComposer
+# 
+# Top level modules:
+# 	ImageComposer
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/H_COUNTER.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/H_COUNTER.sv 
+# -- Compiling module H_COUNTER
+# 
+# Top level modules:
+# 	H_COUNTER
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/FloorController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/FloorController.sv 
+# -- Compiling module FloorController
+# 
+# Top level modules:
+# 	FloorController
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/CLK_DIVIDER.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:04 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/CLK_DIVIDER.sv 
+# -- Compiling module CLK_DIVIDER
+# 
+# Top level modules:
+# 	CLK_DIVIDER
+# End time: 05:31:04 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv 
+# -- Compiling module WallsController
+# 
+# Top level modules:
+# 	WallsController
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv 
+# -- Compiling module VGA_MODULE
+# 
+# Top level modules:
+# 	VGA_MODULE
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/V_COUNTER.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/V_COUNTER.sv 
+# -- Compiling module V_COUNTER
+# 
+# Top level modules:
+# 	V_COUNTER
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv 
+# -- Compiling module TankController
+# 
+# Top level modules:
+# 	TankController
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv 
+# -- Compiling module SpriteController
+# 
+# Top level modules:
+# 	SpriteController
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv 
+# -- Compiling module SIGNAL_SYNC
+# 
+# Top level modules:
+# 	SIGNAL_SYNC
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv 
+# -- Compiling module ScoreController
+# 
+# Top level modules:
+# 	ScoreController
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv 
+# -- Compiling module MemoryManager
+# 
+# Top level modules:
+# 	MemoryManager
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/arm.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/arm.sv 
+# -- Compiling module arm
+# 
+# Top level modules:
+# 	arm
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/condcheck.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/condlogic.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condlogic.sv 
+# -- Compiling module condlogic
+# 
+# Top level modules:
+# 	condlogic
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/controller.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/decoder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopenr.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/extend.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/regfile.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/adder.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/alu.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/alu.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/mux2_1.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:05 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv 
+# -- Compiling module testbenchCPU
+# 
+# Top level modules:
+# 	testbenchCPU
+# End time: 05:31:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU {/home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv}
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:31:06 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv 
+# -- Compiling module imemtb
+# 
+# Top level modules:
+# 	imemtb
+# End time: 05:31:06 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# 
+vlog -work {$MODEL_TECH/../altera/vhdl/altera_mf} -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:32:21 on Nov 22,2019
+# vlog -reportprogress 300 -work $MODEL_TECH/../altera/vhdl/altera_mf -refresh -force_refresh 
+# ** Error: (vlog-66) Execution of vlib failed. Please check the error log for more details.
+# sh: /opt/altera/18.1/modelsim_ase/linuxpe/vlib: No such file or directory
+# End time: 05:32:21 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# /opt/altera/18.1/modelsim_ase/linuxaloem/vlog failed.
+vcom -work {$MODEL_TECH/../altera/vhdl/altera_mf} -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:32:21 on Nov 22,2019
+# vcom -reportprogress 300 -work $MODEL_TECH/../altera/vhdl/altera_mf -refresh -force_refresh 
+# ** Error: (vcom-66) Execution of vlib failed. Please check the error log for more details.
+# sh: /opt/altera/18.1/modelsim_ase/linuxpe/vlib: No such file or directory
+# End time: 05:32:22 on Nov 22,2019, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 0
+# /opt/altera/18.1/modelsim_ase/linuxaloem/vcom failed.
+vsim work.testbenchCPU
+# vsim work.testbenchCPU 
+# Start time: 05:32:38 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.mem_tank2
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.ScoreController
+# Loading work.mem_score
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:32:38 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+vsim work.testbenchCPU
+# vsim work.testbenchCPU 
+# Start time: 05:36:15 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.mem_tank2
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.ScoreController
+# Loading work.mem_score
+# ** Error: (vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v(58): Instantiation of 'altsyncram' failed. The design unit was not found.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+#         Searched libraries:
+#             /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/rtl_work
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:36:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 5, Warnings: 0
+# Error opening /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v
+# Path name '/home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v' doesn't exist.
+# Error opening /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+# Path name '/home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v' doesn't exist.
+# Error opening /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+# Path name '/home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v' doesn't exist.
+# A time value could not be extracted from the current line
+# Error opening /home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+# Path name '/home/gsegura/Documents/taller/proyecto/proyecto/CPU/simulation/modelsim/(vsim-3033) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v' doesn't exist.
+# A time value could not be extracted from the current line
+
+
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:38:17 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:38:17 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+
+
+
+
+
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:38:29 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:38:29 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:38:55 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:38:55 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:39:42 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:39:42 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:39:59 on Nov 22,2019
+# vlog -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Refreshing module adder
+# -- Refreshing module ALU
+# -- Refreshing module arm
+# -- Refreshing module CLK_DIVIDER
+# -- Refreshing module condcheck
+# -- Refreshing module condlogic
+# -- Refreshing module controller
+# -- Refreshing module datapath
+# -- Refreshing module decoder
+# -- Refreshing module dmem
+# -- Refreshing module extend
+# -- Refreshing module FloorController
+# -- Refreshing module flopenr
+# -- Refreshing module flopr
+# -- Refreshing module H_COUNTER
+# -- Refreshing module ImageComposer
+# -- Refreshing module ImageComposer_aux
+# -- Refreshing module imemtb
+# -- Refreshing module mem_floor
+# -- Refreshing module mem_score
+# -- Refreshing module mem_tank1
+# -- Refreshing module mem_tank2
+# -- Refreshing module MemoryManager
+# -- Refreshing module mux2_1
+# -- Refreshing module regfile
+# -- Refreshing module ScoreController
+# -- Refreshing module SIGNAL_SYNC
+# -- Refreshing module SpriteController
+# -- Refreshing module TankController
+# -- Refreshing module testbenchCPU
+# -- Refreshing module top
+# -- Refreshing module V_COUNTER
+# -- Refreshing module VGA_MODULE
+# -- Refreshing module WallsController
+# End time: 05:39:59 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vcom -work rtl_work -refresh -force_refresh
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:39:59 on Nov 22,2019
+# vcom -reportprogress 300 -work rtl_work -refresh -force_refresh 
+# -- Skipping module adder
+# -- Skipping module ALU
+# -- Skipping module arm
+# -- Skipping module CLK_DIVIDER
+# -- Skipping module condcheck
+# -- Skipping module condlogic
+# -- Skipping module controller
+# -- Skipping module datapath
+# -- Skipping module decoder
+# -- Skipping module dmem
+# -- Skipping module extend
+# -- Skipping module FloorController
+# -- Skipping module flopenr
+# -- Skipping module flopr
+# -- Skipping module H_COUNTER
+# -- Skipping module ImageComposer
+# -- Skipping module ImageComposer_aux
+# -- Skipping module imemtb
+# -- Skipping module mem_floor
+# -- Skipping module mem_score
+# -- Skipping module mem_tank1
+# -- Skipping module mem_tank2
+# -- Skipping module MemoryManager
+# -- Skipping module mux2_1
+# -- Skipping module regfile
+# -- Skipping module ScoreController
+# -- Skipping module SIGNAL_SYNC
+# -- Skipping module SpriteController
+# -- Skipping module TankController
+# -- Skipping module testbenchCPU
+# -- Skipping module top
+# -- Skipping module V_COUNTER
+# -- Skipping module VGA_MODULE
+# -- Skipping module WallsController
+# End time: 05:39:59 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:40:05 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# ** Error: (vsim-3037) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(45): Missing instance name in instantiation of 'MemoryManager'.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Error loading design
+# End time: 05:40:05 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/WallsController.sv 
+# -- Compiling module WallsController
+# 
+# Top level modules:
+# 	WallsController
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/VGA_MODULE.sv 
+# -- Compiling module VGA_MODULE
+# 
+# Top level modules:
+# 	VGA_MODULE
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/V_COUNTER.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/V_COUNTER.sv 
+# -- Compiling module V_COUNTER
+# 
+# Top level modules:
+# 	V_COUNTER
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv 
+# -- Compiling module top
+# 
+# Top level modules:
+# 	top
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv 
+# -- Compiling module testbenchCPU
+# 
+# Top level modules:
+# 	testbenchCPU
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/TankController.sv 
+# -- Compiling module TankController
+# 
+# Top level modules:
+# 	TankController
+# End time: 05:40:14 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:14 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SpriteController.sv 
+# -- Compiling module SpriteController
+# 
+# Top level modules:
+# 	SpriteController
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:01
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv 
+# -- Compiling module SIGNAL_SYNC
+# 
+# Top level modules:
+# 	SIGNAL_SYNC
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ScoreController.sv 
+# -- Compiling module ScoreController
+# 
+# Top level modules:
+# 	ScoreController
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/regfile.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/regfile.sv 
+# -- Compiling module regfile
+# 
+# Top level modules:
+# 	regfile
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/mux2_1.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/mux2_1.sv 
+# -- Compiling module mux2_1
+# 
+# Top level modules:
+# 	mux2_1
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/MemoryManager.sv 
+# -- Compiling module MemoryManager
+# 
+# Top level modules:
+# 	MemoryManager
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank2.v 
+# -- Compiling module mem_tank2
+# 
+# Top level modules:
+# 	mem_tank2
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_tank1.v 
+# -- Compiling module mem_tank1
+# 
+# Top level modules:
+# 	mem_tank1
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_score.v 
+# -- Compiling module mem_score
+# 
+# Top level modules:
+# 	mem_score
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -vlog01compat -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/mem_floor.v 
+# -- Compiling module mem_floor
+# 
+# Top level modules:
+# 	mem_floor
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv 
+# -- Compiling module imemtb
+# 
+# Top level modules:
+# 	imemtb
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer_aux.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer_aux.sv 
+# -- Compiling module ImageComposer_aux
+# 
+# Top level modules:
+# 	ImageComposer_aux
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/ImageComposer.sv 
+# -- Compiling module ImageComposer
+# 
+# Top level modules:
+# 	ImageComposer
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/H_COUNTER.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/H_COUNTER.sv 
+# -- Compiling module H_COUNTER
+# 
+# Top level modules:
+# 	H_COUNTER
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopr.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopr.sv 
+# -- Compiling module flopr
+# 
+# Top level modules:
+# 	flopr
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopenr.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/flopenr.sv 
+# -- Compiling module flopenr
+# 
+# Top level modules:
+# 	flopenr
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/FloorController.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/FloorController.sv 
+# -- Compiling module FloorController
+# 
+# Top level modules:
+# 	FloorController
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/extend.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/extend.sv 
+# -- Compiling module extend
+# 
+# Top level modules:
+# 	extend
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv 
+# -- Compiling module dmem
+# 
+# Top level modules:
+# 	dmem
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/decoder.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/decoder.sv 
+# -- Compiling module decoder
+# 
+# Top level modules:
+# 	decoder
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/datapath.sv 
+# -- Compiling module datapath
+# 
+# Top level modules:
+# 	datapath
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/controller.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/controller.sv 
+# -- Compiling module controller
+# 
+# Top level modules:
+# 	controller
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condlogic.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:15 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condlogic.sv 
+# -- Compiling module condlogic
+# 
+# Top level modules:
+# 	condlogic
+# End time: 05:40:15 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condcheck.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:16 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/condcheck.sv 
+# -- Compiling module condcheck
+# 
+# Top level modules:
+# 	condcheck
+# End time: 05:40:16 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/CLK_DIVIDER.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:16 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/CLK_DIVIDER.sv 
+# -- Compiling module CLK_DIVIDER
+# 
+# Top level modules:
+# 	CLK_DIVIDER
+# End time: 05:40:16 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/arm.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:16 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/arm.sv 
+# -- Compiling module arm
+# 
+# Top level modules:
+# 	arm
+# End time: 05:40:16 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/alu.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:16 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/alu.sv 
+# -- Compiling module ALU
+# 
+# Top level modules:
+# 	ALU
+# End time: 05:40:16 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vlog -sv -work work +incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU /home/gsegura/Documents/taller/proyecto/proyecto/CPU/adder.sv
+# Model Technology ModelSim - Intel FPGA Edition vlog 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 05:40:16 on Nov 22,2019
+# vlog -reportprogress 300 -sv -work work "+incdir+/home/gsegura/Documents/taller/proyecto/proyecto/CPU" /home/gsegura/Documents/taller/proyecto/proyecto/CPU/adder.sv 
+# -- Compiling module adder
+# 
+# Top level modules:
+# 	adder
+# End time: 05:40:16 on Nov 22,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+vsim -L altera_mf_ver work.testbenchCPU
+# vsim -L altera_mf_ver work.testbenchCPU 
+# Start time: 05:40:26 on Nov 22,2019
+# Loading sv_std.std
+# Loading work.testbenchCPU
+# Loading work.top
+# Loading work.arm
+# Loading work.controller
+# Loading work.decoder
+# Loading work.condlogic
+# Loading work.flopenr
+# Loading work.condcheck
+# Loading work.datapath
+# Loading work.mux2_1
+# Loading work.flopr
+# Loading work.adder
+# Loading work.regfile
+# Loading work.extend
+# Loading work.ALU
+# Loading work.imemtb
+# Loading work.dmem
+# Loading work.MemoryManager
+# Loading work.VGA_MODULE
+# Loading work.CLK_DIVIDER
+# Loading work.SIGNAL_SYNC
+# Loading work.H_COUNTER
+# Loading work.V_COUNTER
+# Loading work.SpriteController
+# Loading work.FloorController
+# Loading work.mem_floor
+# Loading altera_mf_ver.altsyncram
+# Loading work.WallsController
+# Loading work.TankController
+# Loading work.mem_tank1
+# Loading work.mem_tank2
+# Loading work.ScoreController
+# Loading work.mem_score
+# Loading work.ImageComposer
+# Loading altera_mf_ver.altsyncram_body
+# Loading altera_mf_ver.ALTERA_DEVICE_FAMILIES
+# Loading altera_mf_ver.ALTERA_MF_MEMORY_INITIALIZATION
+# Loading work.ImageComposer_aux
+# ** Warning: (vsim-3017) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Too few port connections. Expected 19, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [PCDPC] - Port size (32) does not match connection size (1) for port 'PCNext'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'MemWrite'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'R'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'G'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'B'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'SYNC_N'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'v_en'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'V_SYNC'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'H_SYNC'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'vga_clk'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'rx'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'rx_led'.
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(36): [PCDPC] - Port size (32) does not match connection size (10) for port 'a'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/dmem_1 File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv
+# ** Warning: (vsim-3839) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(1): Variable '/testbenchCPU/dut/vga/sync/V_COUNTER', driven via a port connection, is multiply driven. See /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/vga/sync File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv
+# ** Warning: (vsim-3839) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(1): Variable '/testbenchCPU/dut/vga/sync/H_COUNTER', driven via a port connection, is multiply driven. See /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/vga/sync File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv
+add wave -position insertpoint sim:/testbenchCPU/*
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv(7)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/imem
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "floor.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read floor.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "floor.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tanque1.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read tanque1.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "tanque1.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tanque2.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read tanque2.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "tanque2.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "score.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read score.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "score.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem/altsyncram_component/m_default/altsyncram_inst
+add wave -position insertpoint sim:/testbenchCPU/dut/arm/*
+add wave -position insertpoint sim:/testbenchCPU/dut/imem/*
+restart
+# ** Warning: (vsim-3017) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Too few port connections. Expected 19, found 8.
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [PCDPC] - Port size (1) does not match connection size (32) for port 'reset'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(1).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [PCDPC] - Port size (32) does not match connection size (1) for port 'PCNext'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'MemWrite'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'R'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'G'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'B'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'SYNC_N'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'v_en'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'V_SYNC'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'H_SYNC'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'vga_clk'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'rx'.
+# ** Warning: (vsim-3722) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/testbenchCPU.sv(10): [TFMPC] - Missing connection for port 'rx_led'.
+# ** Warning: (vsim-3015) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/top.sv(36): [PCDPC] - Port size (32) does not match connection size (10) for port 'a'. The port definition is at: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv(2).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/dmem_1 File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/dmem.sv
+# ** Warning: (vsim-3839) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(1): Variable '/testbenchCPU/dut/vga/sync/V_COUNTER', driven via a port connection, is multiply driven. See /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(9).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/vga/sync File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv
+# ** Warning: (vsim-3839) /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(1): Variable '/testbenchCPU/dut/vga/sync/H_COUNTER', driven via a port connection, is multiply driven. See /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv(8).
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/vga/sync File: /home/gsegura/Documents/taller/proyecto/proyecto/CPU/Graphic_controller/SIGNAL_SYNC.sv
+run
+# ** Warning: (vsim-7) Failed to open readmem file "mem.txt" in read mode.
+# No such file or directory. (errno = ENOENT)    : /home/gsegura/Documents/taller/proyecto/proyecto/CPU/imemtb.sv(7)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/imem
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "floor.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read floor.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "floor.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/floor_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tanque1.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read tanque1.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "tanque1.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank1_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "tanque2.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read tanque2.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "tanque2.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/tank2_mem/altsyncram_component/m_default/altsyncram_inst
+# ** Warning: (vsim-3534) [FOFIR] - Failed to open file "score.mif" for reading.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(263)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem/altsyncram_component/m_default/altsyncram_inst
+# ERROR: cannot read score.mif.
+# ** Warning: (vsim-7) Failed to open readmem file "score.ver" in read mode.
+# No such file or directory. (errno = ENOENT)    : /build/swbuild/SJ/nightly/18.1std/625/l64/work/modelsim/eda/sim_lib/altera_mf.v(48976)
+#    Time: 0 ps  Iteration: 0  Instance: /testbenchCPU/dut/spriteController/score_mem/altsyncram_component/m_default/altsyncram_inst
+# End time: 05:44:35 on Nov 22,2019, Elapsed time: 0:04:09
+# Errors: 0, Warnings: 52, Suppressed Warnings: 20

@@ -10,13 +10,13 @@ input logic [23:0] mem_data_i;
 logic [31:0] x_pos,y_pos,direction;
 logic visible_flag;
 
-assign RGB_o = (visible_flag)? mem_data_i:0;
+assign RGB_o = (visible_flag)? mem_data_i:1'b0;
 
 
-assign mem_address_o = (visible_flag)? (x_pos_i-x_pos-HALF_SIZE)+32*(y_pos_i-y_pos+HALF_SIZE):0;
+assign mem_address_o = (visible_flag)? (x_pos_i-x_pos-HALF_SIZE)+((y_pos_i-y_pos+HALF_SIZE)<<5):1'b0;
 
 assign visible_flag = (	(x_pos_i >= x_pos-HALF_SIZE) & (x_pos_i <  x_pos+HALF_SIZE) & 
-								(y_pos_i >= y_pos-HALF_SIZE) & (y_pos_i <  y_pos+HALF_SIZE) ) ? 1 : 0;
+								(y_pos_i >= y_pos-HALF_SIZE) & (y_pos_i <  y_pos+HALF_SIZE) ) ? 1'b1 : 1'b0;
 
 
 						
@@ -40,8 +40,8 @@ end
 
 initial
 begin
-x_pos=20+15*N;
-y_pos=40+15*N;
+x_pos=60+30*N;
+y_pos=40+30*N;
 end
 
 endmodule
