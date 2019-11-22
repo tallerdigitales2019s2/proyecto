@@ -1,5 +1,5 @@
 Flow report for CPU
-Thu Nov 21 18:24:40 2019
+Fri Nov 22 04:43:44 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,18 +40,18 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Nov 21 18:24:40 2019       ;
+; Flow Status                     ; Successful - Fri Nov 22 04:43:44 2019       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; CPU                                         ;
 ; Top-level Entity Name           ; coso                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSEMA5F31C6                                ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 1,381 / 32,070 ( 4 % )                      ;
-; Total registers                 ; 2339                                        ;
-; Total pins                      ; 41 / 457 ( 9 % )                            ;
+; Logic utilization (in ALMs)     ; 1,772 / 32,070 ( 6 % )                      ;
+; Total registers                 ; 2501                                        ;
+; Total pins                      ; 49 / 457 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
-; Total block memory bits         ; 0 / 4,065,280 ( 0 % )                       ;
+; Total block memory bits         ; 3,194,880 / 4,065,280 ( 79 % )              ;
 ; Total DSP Blocks                ; 0 / 87 ( 0 % )                              ;
 ; Total HSSI RX PCSs              ; 0                                           ;
 ; Total HSSI PMA RX Deserializers ; 0                                           ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/21/2019 18:22:22 ;
+; Start date & time ; 11/22/2019 04:40:45 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; CPU                 ;
 +-------------------+---------------------+
@@ -78,13 +78,26 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
 ; Assignment Name                     ; Value                                  ; Default Value ; Entity Name ; Section Id     ;
 +-------------------------------------+----------------------------------------+---------------+-------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 93094403946049.157438214201512         ; --            ; --          ; --             ;
+; COMPILER_SIGNATURE_ID               ; 44883552432060.157441924554182         ; --            ; --          ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Systemverilog Hdl                      ; --            ; --          ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (SystemVerilog)        ; <None>        ; --          ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --            ; --          ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_floor_bb.v      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_floor_syn.v     ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_score_bb.v      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_tank1_bb.v      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_tank1_syn.v     ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_tank2_bb.v      ; --            ; --          ; --             ;
+; MISC_FILE                           ; Graphic_controller/mem_tank2_syn.v     ; --            ; --          ; --             ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; TecTacToe   ; Top            ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; VGA_MODULE  ; Top            ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --            ; coso        ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; TecTacToe   ; Top            ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; VGA_MODULE  ; Top            ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --            ; coso        ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; TecTacToe   ; Top            ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; VGA_MODULE  ; Top            ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --            ; coso        ; Top            ;
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                    ; --            ; --          ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --             ;
@@ -98,26 +111,26 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:17     ; 1.0                     ; 4860 MB             ; 00:00:30                           ;
-; Fitter               ; 00:01:33     ; 1.1                     ; 6651 MB             ; 00:03:23                           ;
-; Assembler            ; 00:00:08     ; 1.0                     ; 4858 MB             ; 00:00:09                           ;
-; Timing Analyzer      ; 00:00:12     ; 2.2                     ; 5202 MB             ; 00:00:21                           ;
-; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 4789 MB             ; 00:00:02                           ;
-; Total                ; 00:02:12     ; --                      ; --                  ; 00:04:25                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 1075 MB             ; 00:00:34                           ;
+; Fitter               ; 00:02:02     ; 1.4                     ; 2504 MB             ; 00:05:06                           ;
+; Assembler            ; 00:00:11     ; 1.0                     ; 1025 MB             ; 00:00:11                           ;
+; Timing Analyzer      ; 00:00:20     ; 2.4                     ; 1350 MB             ; 00:00:39                           ;
+; EDA Netlist Writer   ; 00:00:03     ; 1.0                     ; 1206 MB             ; 00:00:02                           ;
+; Total                ; 00:02:54     ; --                      ; --                  ; 00:06:32                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
-+------------------------------------------------------------------------------------+
-; Flow OS Summary                                                                    ;
-+----------------------+------------------+------------+------------+----------------+
-; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
-+----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; DESKTOP-U20LTB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; DESKTOP-U20LTB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; DESKTOP-U20LTB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; DESKTOP-U20LTB1  ; Windows 10 ; 10.0       ; x86_64         ;
-; EDA Netlist Writer   ; DESKTOP-U20LTB1  ; Windows 10 ; 10.0       ; x86_64         ;
-+----------------------+------------------+------------+------------+----------------+
++--------------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                            ;
++----------------------+------------------+----------------+----------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name        ; OS Version     ; Processor type ;
++----------------------+------------------+----------------+----------------+----------------+
+; Analysis & Synthesis ; winterfell       ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; Fitter               ; winterfell       ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; Assembler            ; winterfell       ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; Timing Analyzer      ; winterfell       ; Antergos Linux ; Antergos Linux ; x86_64         ;
+; EDA Netlist Writer   ; winterfell       ; Antergos Linux ; Antergos Linux ; x86_64         ;
++----------------------+------------------+----------------+----------------+----------------+
 
 
 ------------

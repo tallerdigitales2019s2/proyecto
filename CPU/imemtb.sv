@@ -4,7 +4,7 @@ module imemtb(input logic [31:0] a,
 logic [31:0] RAM[63:0];
 
 initial
-$readmemh("C://Users//bryan//Desktop//CPU//CPU//mem.txt",RAM);
+$readmemh("mem.txt",RAM);
 
 assign rd = RAM[a[31:2]]; // word aligned
 

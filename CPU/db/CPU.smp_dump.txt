@@ -1,0 +1,7 @@
+
+State Machine - |Graphic_controller|uart_rx:RX0|state
+Name state.DAV state.LOAD state.RECV state.IDLE 
+state.IDLE 0 0 0 0 
+state.RECV 0 0 1 1 
+state.LOAD 0 1 0 1 
+state.DAV 1 0 0 1 
