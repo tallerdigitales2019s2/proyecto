@@ -48,7 +48,7 @@ initial
 begin
 x_pos=300;
 y_pos=20;
-score1=0;
+score1=3;
 score2=0;
 end
 
