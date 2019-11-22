@@ -1,5 +1,5 @@
 Timing Analyzer report for Graphic_controller
-Thu Nov 21 15:51:23 2019
+Thu Nov 21 22:19:56 2019
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -99,14 +99,14 @@ refer to the applicable agreement for further details.
 ; Number detected on machine ; 8           ;
 ; Maximum allowed            ; 4           ;
 ;                            ;             ;
-; Average used               ; 1.99        ;
+; Average used               ; 2.00        ;
 ; Maximum used               ; 4           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;  33.2%      ;
-;     Processor 3            ;  33.0%      ;
-;     Processor 4            ;  32.7%      ;
+;     Processor 2            ;  33.7%      ;
+;     Processor 3            ;  33.5%      ;
+;     Processor 4            ;  33.3%      ;
 +----------------------------+-------------+
 
 
@@ -125,8 +125,8 @@ refer to the applicable agreement for further details.
 +------------+-----------------+--------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                 ; Note ;
 +------------+-----------------+--------------------------------------------+------+
-; 148.72 MHz ; 148.72 MHz      ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ;      ;
-; 320.62 MHz ; 320.62 MHz      ; clk                                        ;      ;
+; 140.11 MHz ; 140.11 MHz      ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ;      ;
+; 303.58 MHz ; 303.58 MHz      ; clk                                        ;      ;
 +------------+-----------------+--------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -142,8 +142,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -5.865 ; -22017.629    ;
-; clk                                        ; -2.119 ; -83.694       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -7.002 ; -24072.427    ;
+; clk                                        ; -2.127 ; -104.748      ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -152,8 +152,8 @@ HTML report is unavailable in plain text report export.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; clk                                        ; 0.376 ; 0.000         ;
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.430 ; 0.000         ;
+; clk                                        ; 0.373 ; 0.000         ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.429 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -174,15 +174,16 @@ No paths to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20928.686    ;
-; clk                                        ; -0.468 ; -36.669       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20882.672    ;
+; clk                                        ; -0.521 ; -38.352       ;
 +--------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Slow 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +----------------------------------------------------------------------------------+
@@ -190,8 +191,8 @@ No synchronizer chains to report.
 +------------+-----------------+--------------------------------------------+------+
 ; Fmax       ; Restricted Fmax ; Clock Name                                 ; Note ;
 +------------+-----------------+--------------------------------------------+------+
-; 155.4 MHz  ; 155.4 MHz       ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ;      ;
-; 309.69 MHz ; 309.69 MHz      ; clk                                        ;      ;
+; 142.41 MHz ; 142.41 MHz      ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ;      ;
+; 291.21 MHz ; 291.21 MHz      ; clk                                        ;      ;
 +------------+-----------------+--------------------------------------------+------+
 This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
 
@@ -201,8 +202,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -5.936 ; -21176.293    ;
-; clk                                        ; -2.229 ; -79.270       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -6.915 ; -23301.551    ;
+; clk                                        ; -2.266 ; -98.781       ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -211,8 +212,8 @@ This panel reports FMAX for every clock in the design, regardless of the user-sp
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; clk                                        ; 0.385 ; 0.000         ;
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.445 ; 0.000         ;
+; clk                                        ; 0.388 ; 0.000         ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.443 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -233,15 +234,16 @@ No paths to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20968.368    ;
-; clk                                        ; -0.484 ; -39.095       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20912.578    ;
+; clk                                        ; -0.531 ; -41.232       ;
 +--------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Slow 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +---------------------------------------------------------------------+
@@ -249,8 +251,8 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -4.029 ; -12140.534    ;
-; clk                                        ; -1.265 ; -23.625       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -4.131 ; -14018.531    ;
+; clk                                        ; -1.295 ; -39.242       ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -259,8 +261,8 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.161 ; 0.000         ;
-; clk                                        ; 0.186 ; 0.000         ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.162 ; 0.000         ;
+; clk                                        ; 0.182 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -281,15 +283,16 @@ No paths to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20805.981    ;
-; clk                                        ; -0.447 ; -6.868        ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20770.289    ;
+; clk                                        ; -0.500 ; -6.908        ;
 +--------------------------------------------+--------+---------------+
 
 
 -----------------------------------------------
 ; Fast 1100mV 85C Model Metastability Summary ;
 -----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +---------------------------------------------------------------------+
@@ -297,8 +300,8 @@ No synchronizer chains to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -3.428 ; -10452.885    ;
-; clk                                        ; -1.152 ; -17.334       ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -3.892 ; -12345.711    ;
+; clk                                        ; -1.199 ; -29.800       ;
 +--------------------------------------------+--------+---------------+
 
 
@@ -307,8 +310,8 @@ No synchronizer chains to report.
 +--------------------------------------------+-------+---------------+
 ; Clock                                      ; Slack ; End Point TNS ;
 +--------------------------------------------+-------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.147 ; 0.000         ;
-; clk                                        ; 0.177 ; 0.000         ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0.148 ; 0.000         ;
+; clk                                        ; 0.172 ; 0.000         ;
 +--------------------------------------------+-------+---------------+
 
 
@@ -329,15 +332,16 @@ No paths to report.
 +--------------------------------------------+--------+---------------+
 ; Clock                                      ; Slack  ; End Point TNS ;
 +--------------------------------------------+--------+---------------+
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20788.848    ;
-; clk                                        ; -0.457 ; -6.628        ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -2.174 ; -20752.892    ;
+; clk                                        ; -0.500 ; -6.873        ;
 +--------------------------------------------+--------+---------------+
 
 
 ----------------------------------------------
 ; Fast 1100mV 0C Model Metastability Summary ;
 ----------------------------------------------
-No synchronizer chains to report.
+Design MTBF is not calculated because the design doesn't meet its timing requirements.
+
 
 
 +-------------------------------------------------------------------------------------------------------------+
@@ -345,12 +349,12 @@ No synchronizer chains to report.
 +---------------------------------------------+------------+-------+----------+---------+---------------------+
 ; Clock                                       ; Setup      ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
 +---------------------------------------------+------------+-------+----------+---------+---------------------+
-; Worst-case Slack                            ; -5.936     ; 0.147 ; N/A      ; N/A     ; -2.174              ;
-;  VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -5.936     ; 0.147 ; N/A      ; N/A     ; -2.174              ;
-;  clk                                        ; -2.229     ; 0.177 ; N/A      ; N/A     ; -0.484              ;
-; Design-wide TNS                             ; -22101.323 ; 0.0   ; 0.0      ; 0.0     ; -21007.463          ;
-;  VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -22017.629 ; 0.000 ; N/A      ; N/A     ; -20968.368          ;
-;  clk                                        ; -83.694    ; 0.000 ; N/A      ; N/A     ; -39.095             ;
+; Worst-case Slack                            ; -7.002     ; 0.148 ; N/A      ; N/A     ; -2.174              ;
+;  VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -7.002     ; 0.148 ; N/A      ; N/A     ; -2.174              ;
+;  clk                                        ; -2.266     ; 0.172 ; N/A      ; N/A     ; -0.531              ;
+; Design-wide TNS                             ; -24177.175 ; 0.0   ; 0.0      ; 0.0     ; -20953.81           ;
+;  VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; -24072.427 ; 0.000 ; N/A      ; N/A     ; -20912.578          ;
+;  clk                                        ; -104.748   ; 0.000 ; N/A      ; N/A     ; -41.232             ;
 +---------------------------------------------+------------+-------+----------+---------+---------------------+
 
 
@@ -601,9 +605,9 @@ No synchronizer chains to report.
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; clk                                        ; clk                                        ; 486      ; 0        ; 0        ; 0        ;
-; clk                                        ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 2268     ; 0        ; 0        ; 0        ;
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 393875   ; 0        ; 0        ; 0        ;
+; clk                                        ; clk                                        ; 572      ; 0        ; 14       ; 0        ;
+; clk                                        ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0        ; 7906     ; 0        ; 0        ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 757820   ; 0        ; 0        ; 0        ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -613,9 +617,9 @@ Entries labeled "false path" only account for clock-to-clock false paths and not
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 ; From Clock                                 ; To Clock                                   ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
-; clk                                        ; clk                                        ; 486      ; 0        ; 0        ; 0        ;
-; clk                                        ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 2268     ; 0        ; 0        ; 0        ;
-; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 393875   ; 0        ; 0        ; 0        ;
+; clk                                        ; clk                                        ; 572      ; 0        ; 14       ; 0        ;
+; clk                                        ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 0        ; 7906     ; 0        ; 0        ;
+; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk ; 757820   ; 0        ; 0        ; 0        ;
 +--------------------------------------------+--------------------------------------------+----------+----------+----------+----------+
 Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
 
@@ -642,7 +646,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 ; Unconstrained Input Ports       ; 1     ; 1    ;
 ; Unconstrained Input Port Paths  ; 2     ; 2    ;
 ; Unconstrained Output Ports      ; 37    ; 37   ;
-; Unconstrained Output Port Paths ; 8113  ; 8113 ;
+; Unconstrained Output Port Paths ; 8042  ; 8042 ;
 +---------------------------------+-------+------+
 
 
@@ -770,7 +774,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 21 15:51:10 2019
+    Info: Processing started: Thu Nov 21 22:19:43 2019
 Info: Command: quartus_sta Graphic_controller -c Graphic_controller
 Info: qsta_default_script.tcl version: #1
 Warning (20013): Ignored 24 assignments for entity "TecTacToe" -- entity does not exist in design
@@ -813,95 +817,103 @@ Info: Found TIMING_ANALYZER_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
 Info: Analyzing Slow 1100mV 85C Model
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.865
+Info (332146): Worst-case setup slack is -7.002
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.865          -22017.629 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -2.119             -83.694 clk 
-Info (332146): Worst-case hold slack is 0.376
+    Info (332119):    -7.002          -24072.427 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -2.127            -104.748 clk 
+Info (332146): Worst-case hold slack is 0.373
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.376               0.000 clk 
-    Info (332119):     0.430               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):     0.373               0.000 clk 
+    Info (332119):     0.429               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -20928.686 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -0.468             -36.669 clk 
+    Info (332119):    -2.174          -20882.672 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -0.521             -38.352 clk 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Slow 1100mV 0C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -5.936
+Info (332146): Worst-case setup slack is -6.915
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -5.936          -21176.293 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -2.229             -79.270 clk 
-Info (332146): Worst-case hold slack is 0.385
+    Info (332119):    -6.915          -23301.551 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -2.266             -98.781 clk 
+Info (332146): Worst-case hold slack is 0.388
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.385               0.000 clk 
-    Info (332119):     0.445               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):     0.388               0.000 clk 
+    Info (332119):     0.443               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -20968.368 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -0.484             -39.095 clk 
+    Info (332119):    -2.174          -20912.578 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -0.531             -41.232 clk 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 85C Model
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -4.029
+Info (332146): Worst-case setup slack is -4.131
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -4.029          -12140.534 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -1.265             -23.625 clk 
-Info (332146): Worst-case hold slack is 0.161
+    Info (332119):    -4.131          -14018.531 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -1.295             -39.242 clk 
+Info (332146): Worst-case hold slack is 0.162
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.161               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):     0.186               0.000 clk 
+    Info (332119):     0.162               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):     0.182               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -20805.981 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -0.447              -6.868 clk 
+    Info (332119):    -2.174          -20770.289 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -0.500              -6.908 clk 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info: Analyzing Fast 1100mV 0C Model
 Info (332123): Deriving Clock Uncertainty. Please refer to report_sdc in the Timing Analyzer to see clock uncertainties.
 Critical Warning (332148): Timing requirements not met
     Info (11105): For recommendations on closing timing, run Report Timing Closure Recommendations in the Timing Analyzer.
-Info (332146): Worst-case setup slack is -3.428
+Info (332146): Worst-case setup slack is -3.892
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -3.428          -10452.885 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -1.152             -17.334 clk 
-Info (332146): Worst-case hold slack is 0.147
+    Info (332119):    -3.892          -12345.711 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -1.199             -29.800 clk 
+Info (332146): Worst-case hold slack is 0.148
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):     0.147               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):     0.177               0.000 clk 
+    Info (332119):     0.148               0.000 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):     0.172               0.000 clk 
 Info (332140): No Recovery paths to report
 Info (332140): No Removal paths to report
 Info (332146): Worst-case minimum pulse width slack is -2.174
     Info (332119):     Slack       End Point TNS Clock 
     Info (332119): ========= =================== =====================
-    Info (332119):    -2.174          -20788.848 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
-    Info (332119):    -0.457              -6.628 clk 
+    Info (332119):    -2.174          -20752.892 VGA_MODULE:vga|CLK_DIVIDER:testclk|out_clk 
+    Info (332119):    -0.500              -6.873 clk 
+Info (332114): Report Metastability: Found 3 synchronizer chains.
+    Info (332114): Design MTBF is not calculated because the design doesn't meet its timing requirements.
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 31 warnings
-    Info: Peak virtual memory: 1272 megabytes
-    Info: Processing ended: Thu Nov 21 15:51:23 2019
+    Info: Peak virtual memory: 1269 megabytes
+    Info: Processing ended: Thu Nov 21 22:19:56 2019
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:23
 

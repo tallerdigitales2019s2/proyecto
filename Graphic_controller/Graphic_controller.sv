@@ -67,7 +67,7 @@ always @(posedge clk)
       leds <= uart_data;
 		MW=1;
 		address=0;
-		address[29:27]=3'b000;
+		address[29:27]=3'b100;
 		address[1:0]=3'b00;
 		data=uart_data;
 	end 
