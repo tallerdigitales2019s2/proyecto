@@ -19,7 +19,6 @@ logic [15:0] mem_address_score;
 logic [15:0] mem_address_floor;
 
 assign MW_tank1 = (address_i[9:7]==3'b000)? MW_i:1'b0;
-//assign MW_tank1 = (address_i[29:27]==3'b000)? MW_i:0;
 assign MW_tank2 = (address_i[9:7]==3'b001)? MW_i:1'b0;
 assign MW_bullet1 = (address_i[9:7]==3'b010)? MW_i:1'b0;
 assign MW_bullet2 = (address_i[9:7]==3'b011)? MW_i:1'b0;

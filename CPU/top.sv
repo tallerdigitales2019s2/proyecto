@@ -33,18 +33,19 @@ logic MemRead=1;
 
 //dmem dmem_1(clk, MemWrite, DataAdr, WriteData, ReadData);
 
-dmem dmem_1(.clk(clk), .we(mem_MW), .a(mem_address), .wd(mem_data_o), .rd(mem_data_i));
+//dmem dmem_1(.clk(clk), .we(mem_MW), .a(mem_address), .wd(mem_data_o), .rd(mem_data_i));
+dmem dmem_1(.clk(clk), .we(MemWrite), .a(DataAdr), .wd(WriteData), .rd(ReadData));
 
 
 
-
-MemoryManager memoryManager(.MR_i(MemRead),.MW_i(MemWrite),.data_i(WriteData),.address_i(DataAdr),.data_o(ReadData), 
-							.mem_address_o(mem_address), .mem_data_i(mem_data_i),.mem_data_o(mem_data_o), .mem_MR_o(), .mem_MW_o(mem_MW),
-							.sm_address_o(sm_address), .sm_data_o(sm_data_o), .sm_MW_o(sm_MW),
-							.uart_address_o(), .uart_data_i(), .uart_MR_o()
-							);
-
-														
+//
+//MemoryManager memoryManager(.MR_i(MemRead),.MW_i(MemWrite),.data_i(WriteData),.address_i(DataAdr),.data_o(ReadData), 
+//							.mem_address_o(mem_address), .mem_data_i(mem_data_i),.mem_data_o(mem_data_o), .mem_MR_o(), .mem_MW_o(mem_MW),
+//							.sm_address_o(sm_address), .sm_data_o(sm_data_o), .sm_MW_o(sm_MW),
+//							.uart_address_o(), .uart_data_i(), .uart_MR_o()
+//							);
+//
+//														
 logic [31:0] x_pos,y_pos;
 logic [23:0] RGB;
 VGA_MODULE vga( 	.clk(clk_50Mhz), .vga_clock(vga_clk), .SYNC_N_o(SYNC_N),  
@@ -55,7 +56,10 @@ VGA_MODULE vga( 	.clk(clk_50Mhz), .vga_clock(vga_clk), .SYNC_N_o(SYNC_N),
 						
 						
 //assign RGB = 24'hFF0000;
-SpriteController spriteController (.processor_clk_i(clk),.MW_i(sm_MW), .address_i(sm_address), .data_i(sm_data_o), .RGB_o(RGB), 
+//SpriteController spriteController (.processor_clk_i(clk),.MW_i(sm_MW), .address_i(sm_address), .data_i(sm_data_o), .RGB_o(RGB), 
+//								.vga_clk_i(vga_clk), .vga_x_pos_i(x_pos), .vga_y_pos_i(y_pos));
+//						
+SpriteController spriteController (.processor_clk_i(clk),.MW_i(MemWrite), .address_i(DataAdr[9:0]), .data_i(WriteData), .RGB_o(RGB), 
 								.vga_clk_i(vga_clk), .vga_x_pos_i(x_pos), .vga_y_pos_i(y_pos));
 						
 
